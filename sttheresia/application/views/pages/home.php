@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>SMPK ST THERESIA KUPANG</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-	<link rel="stylesheet" media="all" href="css/style.css">
+	<link rel="stylesheet" media="all" href="<?php echo base_url(); ?>assets/css/style.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -14,17 +14,17 @@
 
 	<header id="header">
 		<div class="container">
-			<a href="index.html" id="logo" title="SMPK ST THERESIA KUPANG">SMPK ST THERESIA KUPANG</a>
+			<a href="<?php echo base_url(); ?>pages/view" id="logo" title="SMPK ST THERESIA KUPANG">SMPK ST THERESIA KUPANG</a>
 			<div class="menu-trigger"></div>
 			<nav id="menu">
 				<ul>
-					<li><a href="events.html">Courses</a></li>
-					<li><a href="gallery.html">Students</a></li>
-					<li><a href="events.html">Events</a></li>
+					<li><a href="<?php echo base_url(); ?>pages/events">Courses</a></li>
+					<li><a href="<?php echo base_url(); ?>pages/gallery">Students</a></li>
+					<li><a href="<?php echo base_url(); ?>pages/events">Events</a></li>
  				</ul>
 				<ul>
-					<li><a href="gallery.html">Teachers</a></li>
-					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="<?php echo base_url(); ?>pages/gallery">Teachers</a></li>
+					<li><a href="<?php echo base_url(); ?>pages/gallery">Gallery</a></li>
 					<li><a href="#fancy" class="get-contact">Contact</a></li>
    				</ul>
 			</nav>
@@ -246,8 +246,8 @@
 	</div>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+	<script>window.jQuery || document.write("<script src='<?php echo base_url(); ?>js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+	<script src="<?php echo base_url(); ?>js/plugins.js"></script>
+	<script src="<?php echo base_url(); ?>js/main.js"></script>
 </body>
 </html>
