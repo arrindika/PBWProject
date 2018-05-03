@@ -19,7 +19,7 @@
 				<div class="container">
 					<div class="info">
 						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="<?php echo base_url(); ?>pages/sejarahsekolah">Check out our new programs</a>
+						<a href="#">Check out our new programs</a>
 					</div>
 				</div>
 				<!-- / content -->
@@ -48,24 +48,16 @@
 
 	<section class="posts">
 		<div class="container">
-			<article>
-				<div class="pic"><img width="121" src="<?php echo base_url(); ?>assets/images/2.png" alt=""></div>
-				<div class="info">
-					<h3>Visi</h3>
-					<p>Terwujudnya insan yang unggul, mandiri, terampil, berakhlak mulia dan berbudi pekerti luhur </p>
-				</div>
-			</article>
-			<article>
-				<div class="pic"><img width="121" src="<?php echo base_url(); ?>assets/images/3.png" alt=""></div>
-				<div class="info">
-					<h3>Misi</h3>
-					<ol type="1">
-						<li>Melaksanakan proses pembelajaran secara profesional untuk meningkatkan kemampuan iptek peserta didik</li>
-						<li>Memberikan bimbingan secara intensif untuk meningkatkan potensi peserta didik</li>
-						<li>Menumbuh kembangkan penghayatan dan pengalaman nilai-nilai agama yang dianut untuk membentuk pribadi yang berbudi pekerti luhur dan berakhlak mulia</li>
-					</ol>
-				</div>
-			</article>
+			<div class="info">
+				<h3>Sejarah Sekolah</h3>
+				<p>Tepatnya 23 Juli 1955 tiga orang suster tiba di Kupang untuk memulai karya SSpS, ketiga Suster dimaksud adalah  Sr. Maria  Carolinda,SSpS Sr. Maria Claverita,SSpS dan Sr.Maria  Gondulpha SSpS.  Ketiga biarawati ini mendapat sambutan dari saudara sependiri mereka yakni, P. Kersten,SVD, dengan menyediakan sebuah hunian sederhana yang akan menjadi biara Suster-Suster Abdi Roh Kudus(SSpS). Rumah itu adalah sebuah rumah Reinardis di Jalan Merdeka. Sekarang dikenal sebagai Apotik Ani.</p><br>
+   				<p>Setapak demi setapak ketiga suster tadi mulai merencanakan berbagai program jangka pendek dan jangka panjang, dan salah satu rencana jangka panjang adalah membuka lembaga pendidikan(Sekolah).  27 Juli 1955, saat-saat orang Kupang tengah menyiapkan diri merayakan perayaan kemerdekaan RI ke-10 pendaftaran siswa perdana untuk  TK dan SMP dimulai.</p><br>
+    			<p>Puji Tuhan 1 Agustus 1955 pembukaan TKK Maria Goreti oleh Sr. Maria Claverita,SSpS dengan jumlah murid 40 orang.  Tak ketinggalan Sr.Maria Claverita,SSpS juga membuka SD Putri dengan jumlah 40 siswa. Di hari yang sama Sr. Maria Carolinda,SSpS membuka SMP Putri dengan jumlah 32 siswa. Aktivitas belajar mengajar SMP dimulai di rumah Paroki yang masih kosong. Bangku-bangku boleh pinjam dari Gereja. Di hari pertama, setelah melewati beberapa jam pelajaran tanpa meja, sekitar pukul 09.00 WITA barulah beberapa frater overste membawa meja-meja untuk para siswa SMP sehingga kegiatan belajar bisa menjadi lebih baik.</p><br>
+    			<p>31 Agustus 1955 jumlah siswa TK Maria Goreti bertambah menjadi 60 orang, sedangkan jumlah siswa SD Putri 45 orang dan SMP Putri berjumlah 44 siswa. Saat itu para suster berjuang untuk membeli tanah untuk dibangun sekolah dan biara namun tidak mudah memperolehnya.</p><br>
+   				<p>Tahun ajaran baru tepatnta Agustus 1956, permulaan tahun sekolah. Murid bertambah banyak. Baik TK, SD maupun SMP mengalami penambahan kelas. Karena ruangan tidak mencukupi, Sr. Maria Carolinda ,SSpS, dan siswa SMP kelas I dan II pindah ke asrama Tukang (dekat Kuburan Pahlawan) tempat Sanggar Remaja. Empat bulan kemudian sesudah melewati banyak pertimbangan dan urusan, mulailah penggalian fundamen untuk dibagun gedung sekolah SMP Putri di hutan jati jalan Merdeka.</p><br>
+   				<p>1 Agustus 1957 tiga ruang yang baru saja dibangun dipakai sebagai ruang belajar SMP Suster. Desember 1957  Sr. Maria Claverita,SSpS dan siswa TK Maria Goreti ikut bergabung dengan SMP Suster, hingga saat ini.</p><br>
+   				<p>Tahun 2005 SMPK St. Theresia merayakan ulang tahun yang ke-50 dan kini  pada usia yang ke-60 tercatat memiliki 542 siswa dan 44 Guru dan Karyawan/ti. Dari awal berdiri hingga kini tercatat sudah 9996 siswa yang pernah dan sedang mengenyam pendidikan di SMPK St. Theresia.</p><br>
+			</div>
 		</div>
 		<!-- / container -->
 	</section>
@@ -74,7 +66,7 @@
 		<div class="container">
 			<h2>Latest news</h2>
 			<article>
-				<div class="pic"><img src="<?php echo base_url(); ?>assets/images/1.png" alt=""></div>
+				<div class="pic"><img src="images/1.png" alt=""></div>
 				<div class="info">
 					<h4>Omnis iste natus error sit voluptatem accusantium </h4>
 					<p class="date">14 APR 2014, Jason Bang</p>
@@ -83,7 +75,7 @@
 				</div>
 			</article>
 			<article>
-				<div class="pic"><img src="<?php echo base_url(); ?>assets/images/1_1.png" alt=""></div>
+				<div class="pic"><img src="images/1_1.png" alt=""></div>
 				<div class="info">
 					<h4>Omnis iste natus error sit voluptatem accusantium </h4>
 					<p class="date">14 APR 2014, Jason Bang</p>
@@ -158,23 +150,6 @@
 	</div>
 
 	<?php include ('footer.php') ?>
-
-	<div id="fancy">
-		<h2>Request information</h2>
-		<form action="#">
-			<div class="left">
-				<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
-				<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
-				<fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>
-			</div>
-			<div class="right">
-				<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
-			</div>
-			<div class="btn-holder">
-				<button class="btn blue" type="submit">Send request</button>
-			</div>
-		</form>
-	</div>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>window.jQuery || document.write("<script src='<?php echo base_url();?>js/jquery-1.11.1.min.js'>\x3C/script>")</script>

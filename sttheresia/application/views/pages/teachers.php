@@ -11,7 +11,7 @@
 	<![endif]-->
 </head>
 <body>
-	<<?php include ('header.php'); ?>
+    <<?php include ('header.php'); ?>
 
 	<div class="slider">
 		<ul class="bxslider">
@@ -19,7 +19,7 @@
 				<div class="container">
 					<div class="info">
 						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="<?php echo base_url(); ?>pages/sejarahsekolah">Check out our new programs</a>
+						<a href="#">Check out our new programs</a>
 					</div>
 				</div>
 				<!-- / content -->
@@ -49,14 +49,14 @@
 	<section class="posts">
 		<div class="container">
 			<article>
-				<div class="pic"><img width="121" src="<?php echo base_url(); ?>assets/images/2.png" alt=""></div>
+				<div class="pic"><img width="121" src="images/2.png" alt=""></div>
 				<div class="info">
 					<h3>Visi</h3>
 					<p>Terwujudnya insan yang unggul, mandiri, terampil, berakhlak mulia dan berbudi pekerti luhur </p>
 				</div>
 			</article>
 			<article>
-				<div class="pic"><img width="121" src="<?php echo base_url(); ?>assets/images/3.png" alt=""></div>
+				<div class="pic"><img width="121" src="images/3.png" alt=""></div>
 				<div class="info">
 					<h3>Misi</h3>
 					<ol type="1">
@@ -74,7 +74,7 @@
 		<div class="container">
 			<h2>Latest news</h2>
 			<article>
-				<div class="pic"><img src="<?php echo base_url(); ?>assets/images/1.png" alt=""></div>
+				<div class="pic"><img src="images/1.png" alt=""></div>
 				<div class="info">
 					<h4>Omnis iste natus error sit voluptatem accusantium </h4>
 					<p class="date">14 APR 2014, Jason Bang</p>
@@ -83,7 +83,7 @@
 				</div>
 			</article>
 			<article>
-				<div class="pic"><img src="<?php echo base_url(); ?>assets/images/1_1.png" alt=""></div>
+				<div class="pic"><img src="images/1_1.png" alt=""></div>
 				<div class="info">
 					<h4>Omnis iste natus error sit voluptatem accusantium </h4>
 					<p class="date">14 APR 2014, Jason Bang</p>
