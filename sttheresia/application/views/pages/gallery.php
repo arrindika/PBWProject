@@ -11,13 +11,13 @@
 	<![endif]-->
 </head>
 <body>
-	<<?php include ('header.php'); ?>
+	<?php include ('header.php'); ?>
 
 	<div class="divider"></div>
 
 	<div class="content">
 		<div class="container">
-			<h1 class="single">Photos of the selected category</h1>
+			<h1 class="single">Guru Pengajar SMPK St. Theresia Kupang</h1>
 
 			<div class="main-content">
 				<div class="slider-con">
@@ -25,73 +25,28 @@
 						<li>
 							<div class="slide">
 								<ul>
-									<li><a href="#"><img src="images/5.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_2.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_3.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_4.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_5.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_6.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_7.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_8.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_9.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_10.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_11.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_12.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_13.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_14.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_15.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_16.png" alt=""></a></li>
+
 								</ul>
 							</div>
 						</li>
 						<li>
 							<div class="slide">
 								<ul>
-									<li><a href="#"><img src="images/5.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_2.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_3.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_4.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_5.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_6.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_7.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_8.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_9.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_10.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_11.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_12.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_13.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_14.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_15.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_16.png" alt=""></a></li>
+
 								</ul>
 							</div>
 						</li>
 						<li>
 							<div class="slide">
 								<ul>
-									<li><a href="#"><img src="images/5.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_2.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_3.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_4.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_5.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_6.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_7.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_8.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_9.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_10.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_11.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_12.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_13.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_14.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_15.png" alt=""></a></li>
-									<li><a href="#"><img src="images/5_16.png" alt=""></a></li>
+
 								</ul>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
-
+		<!--
 			<aside id="sidebar">
 				<div class="widget sidemenu">
 					<ul>
@@ -105,6 +60,7 @@
 					</ul>
 				</div>
 			</aside>
+		-->
 			<!-- / sidebar -->
 
 		</div>
@@ -112,23 +68,6 @@
 	</div>
 
 	<?php include ('footer.php') ?>
-
-	<div id="fancy">
-		<h2>Request information</h2>
-		<form action="#">
-			<div class="left">
-				<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
-				<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
-				<fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>
-			</div>
-			<div class="right">
-				<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
-			</div>
-			<div class="btn-holder">
-				<button class="btn blue" type="submit">Send request</button>
-			</div>
-		</form>
-	</div>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>window.jQuery || document.write("<script src=<?php echo base_url(); ?>js/jquery-1.11.1.min.js'>\x3C/script>")</script>

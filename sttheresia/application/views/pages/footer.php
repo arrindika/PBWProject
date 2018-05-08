@@ -29,17 +29,6 @@
                     <li class="pinterest"><a href="#">Pinterest</a></li>
                 </ul>
             </article>
-            <article class="col-4">
-                <h3>Newsletter</h3>
-                <p>Assumenda est omnis dolor repellendus temporibus autem quibusdam.</p>
-                <form action="#">
-                    <input placeholder="Email address..." type="text">
-                    <button type="submit">Subscribe</button>
-                </form>
-                <ul>
-                    <li><a href="#"></a></li>
-                </ul>
-            </article>
         </section>
         <p class="copy">Copyright 2014 Harrison High School. Designed by <a href="http://www.vandelaydesign.com/" title="Designed by Vandelay Design" target="_blank">Vandelay Design</a>. All rights reserved.</p>
     </div>

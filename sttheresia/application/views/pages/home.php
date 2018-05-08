@@ -11,7 +11,7 @@
 	<![endif]-->
 </head>
 <body>
-	<<?php include ('header.php'); ?>
+	<?php include ('header.php'); ?>
 
 	<div class="slider">
 		<ul class="bxslider">
@@ -101,46 +101,30 @@
 	<section class="events">
 		<div class="container">
 			<h2>Upcoming events</h2>
-			<article>
-				<div class="current-date">
-					<p>April</p>
-					<p class="date">15</p>
-				</div>
-				<div class="info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<article>
-				<div class="current-date">
-					<p>April</p>
-					<p class="date">17</p>
-				</div>
-				<div class="info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<article>
-				<div class="current-date">
-					<p>April</p>
-					<p class="date">25</p>
-				</div>
-				<div class="info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<article>
-				<div class="current-date">
-					<p>April</p>
-					<p class="date">29</p>
-				</div>
-				<div class="info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
+			<?php
+				if (isset($upcomingEvent)) {
+					foreach ($upcomingEvent as $event) {
+						$eventMiniBody = substr ($event->eventBody, 0, 200);
+						$eventMiniBody = $eventMiniBody."...";
+
+						$eventMonth = date('F', strtotime($event->eventDateTime));
+						$eventDay = date('d', strtotime($event->eventDateTime));
+						$eventTime = date("H:i", strtotime($event->eventDateTime));
+						echo "
+							<article>
+								<div class='current-date'>
+									<p>$eventMonth</p>
+									<p class='date'>$eventDay</p>
+								</div>
+								<div class='info'>
+									<p>$eventMiniBody</p>
+									<a class='more' href='#'>Read more</a>
+								</div>
+							</article>
+						";
+					}
+				}
+			?>
 			<div class="btn-holder">
 				<a class="btn blue" href="#">See all upcoming events</a>
 			</div>
@@ -148,7 +132,7 @@
 		<!-- / container -->
 	</section>
 	<div class="container">
-		<a href="#fancy" class="info-request">
+		<a href="<?php echo base_url(); ?>pages/contact" class="info-request">
 			<span class="holder">
 				<span class="title">Request information</span>
 				<span class="text">Do you have some questions? Fill the form and get an answer!</span>
@@ -158,23 +142,6 @@
 	</div>
 
 	<?php include ('footer.php') ?>
-
-	<div id="fancy">
-		<h2>Request information</h2>
-		<form action="#">
-			<div class="left">
-				<fieldset class="mail"><input placeholder="Email address..." type="text"></fieldset>
-				<fieldset class="name"><input placeholder="Name..." type="text"></fieldset>
-				<fieldset class="subject"><select><option>Choose subject...</option><option>Choose subject...</option><option>Choose subject...</option></select></fieldset>
-			</div>
-			<div class="right">
-				<fieldset class="question"><textarea placeholder="Question..."></textarea></fieldset>
-			</div>
-			<div class="btn-holder">
-				<button class="btn blue" type="submit">Send request</button>
-			</div>
-		</form>
-	</div>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>window.jQuery || document.write("<script src='<?php echo base_url();?>js/jquery-1.11.1.min.js'>\x3C/script>")</script>
