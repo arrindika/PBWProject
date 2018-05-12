@@ -32,7 +32,7 @@
     <section id="breadcrumb">
       <div class="container">
         <ol class="breadcrumb">
-            <li><a href="<?php echo base_url(); ?>admin/index">Dashboard</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/home">Dashboard</a></li>
             <li class="active">Page : Teachers Page</li>
         </ol>
       </div>

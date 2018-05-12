@@ -13,11 +13,24 @@ class Admin extends CI_Controller{
 	// function index(){
 	// 	$this->load->view('pages/home');
 	// }
-	public function index(){
-		$this->load->model('event_model');
-		$this->load->model('teacher_model');
-		$this->load->view('admin/index');
-	}
+	// public function index(){
+	// 	$this->load->model('event_model');
+	// 	$this->load->model('news_model');
+	// 	$this->load->model('teacher_model');
+	// 	$this->load->view('admin/index');
+	// 	// if(logged_in())
+	// 	// 	{
+	// 	// 		$this->load->model('event_model');
+	// 	// 		$this->load->model('news_model');
+	// 	// 		$this->load->model('teacher_model');
+	// 	// 		$this->load->view('admin/index');
+	// 	// 	}
+	// 	// else
+	// 	// 	{
+	// 	// 		$this->load->view('login_admin');
+	// 	// 	}
+	// }
+
 
 	//page events
 	public function edit(){
@@ -61,15 +74,9 @@ class Admin extends CI_Controller{
 	}
 
 
-	public function login(){
+	public function home(){
 		$this->load->view('admin/index');
 	}
-
-	public function users(){
-		$this->load->view('admin/users');
-	}
-
-
 
 	//page News
 	public function news(){

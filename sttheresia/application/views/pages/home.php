@@ -19,24 +19,7 @@
 				<div class="container">
 					<div class="info">
 						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="<?php echo base_url(); ?>pages/sejarahsekolah">Check out our new programs</a>
-					</div>
-				</div>
-				<!-- / content -->
-			</li>
-			<li>
-				<div class="container">
-					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="#">Check out our new programs</a>
-					</div>
-				</div>
-				<!-- / content -->
-			</li>
-			<li>
-				<div class="container">
-					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
+						<a href="<?php echo base_url(); ?>pages/sejarahsekolah">Sejarah Sekolah SMPK ST Theresia</a>
 					</div>
 				</div>
 				<!-- / content -->

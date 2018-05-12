@@ -73,7 +73,11 @@
                 </div>
                 <div class="col-md-3">
                   <div class="well dash-box">
-                    <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 33</h2>
+                    <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                        <?php
+                            echo $this->db->count_all('info');
+                        ?>
+                    </h2>
                     <h4>News</h4>
                   </div>
                 </div>
