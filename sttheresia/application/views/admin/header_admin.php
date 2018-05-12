@@ -12,7 +12,7 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="<?php echo base_url(); ?>admin/index">Dashboard</a></li>
-        <li><a href="<?php echo base_url(); ?>admin/posts">Posts</a></li>
+        <li><a href="<?php echo base_url(); ?>admin/news">News</a></li>
         <li><a href="<?php echo base_url(); ?>admin/users">Users</a></li>
         <li><a href="<?php echo base_url(); ?>admin/edit">Events</a></li>
         <li><a href="<?php echo base_url(); ?>admin/teachers">Teachers</a></li>

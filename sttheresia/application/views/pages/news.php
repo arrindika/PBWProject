@@ -13,6 +13,38 @@
 <body>
     <?php include ('header.php'); ?>
 
+	<div class="divider"></div>
+
+	<div class="content">
+		<div class="container">
+
+			<div class="container">
+				<h1>News</h1>
+				<section class="posts-con">
+					<?php
+						if (isset($newss)) {
+							foreach ($newss as $news) {
+								// $eventMonth = date('F', strtotime($news->eventDateTime));
+								// $eventDay = date('d', strtotime($event->eventDateTime));
+								// $eventTime = date("H:i", strtotime($event->eventDateTime));
+								echo "
+									<article>
+										<div class='info'>
+											<h3>$news->newsTitle</h3>
+											<p class='info-line'><span class='time'>$news->newsDate</span><span class='place'>Pesan Dari : $news->newsAuthor</span></p>
+											<p>$news->newsBody</p>
+										</div>
+									</article>
+								";
+							}
+						}
+					?>
+				</section>
+			</div>
+		</div>
+		<!-- / container -->
+	</div>
+
 	<?php include ('footer.php') ?>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>

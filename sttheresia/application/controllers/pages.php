@@ -9,6 +9,8 @@ class pages extends CI_Controller {
                 }
 
                 $data['title'] = ucfirst($page);
+                $this->load->model('news_model');
+                $data['latestNews'] = $this->news_model->select_news_two_nearest();
                 $this->load->model('event_model');
                 $data['upcomingEvent'] = $this->event_model->select_events_four_nearest();
                 $this->load->helper('url');
@@ -21,6 +23,12 @@ class pages extends CI_Controller {
                 }
 
                 $data['title'] = ucfirst($page);
+                $this->load->model('news_model');
+                $data['latestNews'] = $this->news_model->select_news_two_nearest();
+                $this->load->model('event_model');
+                $data['upcomingEvent'] = $this->event_model->select_events_four_nearest();
+                $this->load->model('news_model');
+                $data['upcomingEvent'] = $this->event_model->select_news();
                 $this->load->helper('url');
                 $this->load->view('pages/'.$page, $data);
         }
@@ -29,8 +37,9 @@ class pages extends CI_Controller {
                 {
                     show_404();
                 }
-
                 $data['title'] = ucfirst($page);
+                $this->load->model('news_model');
+                $data['latestNews'] = $this->news_model->select_news_two_nearest();
                 $this->load->model('event_model');
                 $data['events'] = $this->event_model->select_events();
                 $this->load->helper('url');
@@ -41,8 +50,9 @@ class pages extends CI_Controller {
                 {
                     show_404();
                 }
-
                 $data['title'] = ucfirst($page);
+                $this->load->model('news_model');
+                $data['latestNews'] = $this->news_model->select_news_two_nearest();
                 $this->load->model('event_model');
                 $data['upcomingEvent'] = $this->event_model->select_events_four_nearest();
                 $this->load->helper('url');
@@ -53,10 +63,13 @@ class pages extends CI_Controller {
                 {
                     show_404();
                 }
-
                 $data['title'] = ucfirst($page);
+                $this->load->model('news_model');
+                $data['latestNews'] = $this->news_model->select_news_two_nearest();
                 $this->load->model('teacher_model');
                 $data['teachersdata'] = $this->teacher_model->select_dataguru();
+                $this->load->model('event_model');
+                $data['upcomingEvent'] = $this->event_model->select_events_four_nearest();
                 $this->load->helper('url');
                 $this->load->view('pages/'.$page, $data);
         }
@@ -65,8 +78,12 @@ class pages extends CI_Controller {
                 {
                     show_404();
                 }
-
                 $data['title'] = ucfirst($page);
+                $this->load->model('news_model');
+                $data['newss'] = $this->news_model->select_news();
+                $data['latestNews'] = $this->news_model->select_news_two_nearest();
+                $this->load->model('event_model');
+                $data['upcomingEvent'] = $this->event_model->select_events_four_nearest();
                 $this->load->helper('url');
                 $this->load->view('pages/'.$page, $data);
         }
@@ -75,8 +92,11 @@ class pages extends CI_Controller {
                 {
                     show_404();
                 }
-
                 $data['title'] = ucfirst($page);
+                $this->load->model('news_model');
+                $data['latestNews'] = $this->news_model->select_news_two_nearest();
+                $this->load->model('event_model');
+                $data['upcomingEvent'] = $this->event_model->select_events_four_nearest();
                 $this->load->helper('url');
                 $this->load->view('pages/'.$page, $data);
         }
@@ -89,7 +109,7 @@ class pages extends CI_Controller {
 
             $from_email = $email;
 
-             $to_email = 'dikandapamerang@gmail.com';
+             $to_email = 'smpkatolik_sttheresia@yahoo.co.id';
 
              //Load email library
              $this->load->library('email');

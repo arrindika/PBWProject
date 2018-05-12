@@ -32,7 +32,7 @@
     <section id="breadcrumb">
       <div class="container">
         <ol class="breadcrumb">
-            <li><a href="<?php echo base_url(); ?>index">Dashboard</a></li>
+            <li><a href="<?php echo base_url(); ?>admin/index">Dashboard</a></li>
             <li class="active">Page : Teachers Page</li>
         </ol>
       </div>
@@ -301,7 +301,7 @@
     </section>
 
     <footer id="footer">
-      <p>Copyright AdminStrap, &copy; 2017</p>
+      <p>SMPK ST THERESIA KUPANG, &copy; 2018</p>
     </footer>
 
     <!-- Modals -->

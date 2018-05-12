@@ -37,7 +37,6 @@
 				<div class="container">
 					<div class="info">
 						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="#">Check out our new programs</a>
 					</div>
 				</div>
 				<!-- / content -->
@@ -60,9 +59,9 @@
 				<div class="info">
 					<h3>Misi</h3>
 					<ol type="1">
-						<li>Melaksanakan proses pembelajaran secara profesional untuk meningkatkan kemampuan iptek peserta didik</li>
-						<li>Memberikan bimbingan secara intensif untuk meningkatkan potensi peserta didik</li>
-						<li>Menumbuh kembangkan penghayatan dan pengalaman nilai-nilai agama yang dianut untuk membentuk pribadi yang berbudi pekerti luhur dan berakhlak mulia</li>
+						<li>Melaksanakan proses pembelajaran secara profesional untuk meningkatkan kemampuan iptek peserta didik</li></br>
+						<li>Memberikan bimbingan secara intensif untuk meningkatkan potensi peserta didik</li></br>
+						<li>Menumbuh kembangkan penghayatan dan pengalaman nilai-nilai agama yang dianut untuk membentuk pribadi yang berbudi pekerti luhur dan berakhlak mulia</li></br>
 					</ol>
 				</div>
 			</article>
@@ -70,30 +69,68 @@
 		<!-- / container -->
 	</section>
 
+	<section class="posts">
+		<div class="container">
+			<article>
+				<div class="pic"><img width="121" src="<?php echo base_url(); ?>assets/images/2.png" alt=""></div>
+				<div class="info">
+					<h3>Program Sekolah</h3>
+					<p>Terwujudnya insan yang unggul, mandiri, terampil, berakhlak mulia dan berbudi pekerti luhur </p>
+				</div>
+			</article>
+			<article>
+				<div class="pic"><img width="121" src="<?php echo base_url(); ?>assets/images/2.png" alt=""></div>
+				<div class="info">
+					<h3>Ekstrakulikuler</h3>
+					<p>*Paskibraka</p>
+					<p>*Osis</p>
+					<p>*Pramuka</p>
+					<p>*Klub Futsal</p>
+				</div>
+			</article>
+		</div>
+		<!-- / container -->
+	</section>
+
+
 	<section class="news">
 		<div class="container">
 			<h2>Latest news</h2>
-			<article>
-				<div class="pic"><img src="<?php echo base_url(); ?>assets/images/1.png" alt=""></div>
 				<div class="info">
-					<h4>Omnis iste natus error sit voluptatem accusantium </h4>
-					<p class="date">14 APR 2014, Jason Bang</p>
-					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores (...)</p>
-					<a class="more" href="#">Read more</a>
+					<?php
+						if (isset($latestNews)) {
+							foreach ($latestNews as $news) {
+								// int strlen ( string $news->newsBody )
+								// if ($strlen) {
+								// 	// code...
+								// }
+								$str = $news->newsBody;
+								if(strlen($str)>=200){
+									$newsMiniBody = substr ($news->newsBody, 0, 200);
+									$newsMiniBody = $newsMiniBody."(...)";
+								}
+								else {
+									$newsMiniBody = $news->newsBody;
+								}
+								echo "
+									<article>
+										<h4>
+											<b>$news->newsTitle</b>
+											<p class='date'>$news->newsDate, Pesan Dari : $news->newsAuthor</p>
+										</h4>
+										<div class='info'>
+											<p>$newsMiniBody</p>
+											<a class='more' href='news'>Read more</a>
+										</div>
+									</article>
+								";
+							}
+						}
+					?>
+					<div class="btn-holder">
+						<a class="btn" href="<?php echo base_url(); ?>pages/news">See archival news</a>
+					</div>
 				</div>
-			</article>
-			<article>
-				<div class="pic"><img src="<?php echo base_url(); ?>assets/images/1_1.png" alt=""></div>
-				<div class="info">
-					<h4>Omnis iste natus error sit voluptatem accusantium </h4>
-					<p class="date">14 APR 2014, Jason Bang</p>
-					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores (...)</p>
-					<a class="more" href="#">Read more</a>
-				</div>
-			</article>
-			<div class="btn-holder">
-				<a class="btn" href="#">See archival news</a>
-			</div>
 		</div>
 		<!-- / container -->
 	</section>
@@ -104,9 +141,14 @@
 			<?php
 				if (isset($upcomingEvent)) {
 					foreach ($upcomingEvent as $event) {
-						$eventMiniBody = substr ($event->eventBody, 0, 200);
-						$eventMiniBody = $eventMiniBody."...";
-
+						$str = $event->eventBody;
+						if(strlen($str)>=200){
+							$eventMiniBody = substr ($event->eventBody, 0, 200);
+							$eventMiniBody = $eventMiniBody."...";
+						}
+						else {
+							$eventMiniBody = $event->eventBody;
+						}
 						$eventMonth = date('F', strtotime($event->eventDateTime));
 						$eventDay = date('d', strtotime($event->eventDateTime));
 						$eventTime = date("H:i", strtotime($event->eventDateTime));
@@ -118,7 +160,7 @@
 								</div>
 								<div class='info'>
 									<p>$eventMiniBody</p>
-									<a class='more' href='#'>Read more</a>
+									<a class='more' href='events'>Read more</a>
 								</div>
 							</article>
 						";
@@ -126,7 +168,7 @@
 				}
 			?>
 			<div class="btn-holder">
-				<a class="btn blue" href="#">See all upcoming events</a>
+				<a class="btn blue" href="<?php echo base_url(); ?>pages/events">See all upcoming events</a>
 			</div>
 		</div>
 		<!-- / container -->

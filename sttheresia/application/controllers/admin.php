@@ -65,12 +65,53 @@ class Admin extends CI_Controller{
 		$this->load->view('admin/index');
 	}
 
-	public function posts(){
-		$this->load->view('admin/posts');
-	}
 	public function users(){
 		$this->load->view('admin/users');
 	}
+
+
+
+	//page News
+	public function news(){
+		$this->load->model('news_model');
+		$editID = $this->news_model->input->post('edit-id');
+		if($editID!==NULL){
+			$data['newsEdit'] = $this->news_model->select_news_where_id($editID)[0];
+		}
+		$data['newsdata'] = $this->news_model->select_news();
+		$this->load->view('admin/news', $data);
+	}
+	public function deleteNews(){
+		$this->load->model('news_model');
+		$deleteID = $this->news_model->input->post('edit-id');
+		if($deleteID!==NULL){
+			$this->news_model->delete_news_where_id($deleteID);
+		}
+		$data['newsdata'] = $this->news_model->select_news();
+		$this->load->view('admin/news', $data);
+	}
+	public function submitnews(){
+		$this->load->model('news_model');
+		$newsTitle = $this->news_model->input->post('newsTitle');
+		$newsBody = $this->news_model->input->post('newsBody');
+		$newsDate = $this->news_model->input->post('newsDate');
+		$newsAuthor = $this->news_model->input->post('newsAuthor');
+		$this->news_model->insert_news($newsTitle,$newsBody,$newsDate,$newsAuthor);
+		redirect(base_url().'admin/news');
+	}
+	public function editnews()
+	{
+		$this->load->model('news_model');
+		$id = $this->news_model->input->post('id');
+		$newsTitle = $this->news_model->input->post('newsTitle');
+		$newsBody = $this->news_model->input->post('newsBody');
+		$newsDate = $this->news_model->input->post('newsDate');
+		$newsAuthor = $this->news_model->input->post('newsAuthor');
+		$this->news_model->update_news_where_id($id,$newsTitle,$newsBody,$newsDate,$newsAuthor);
+		redirect(base_url().'admin/news');
+	}
+
+
 
 
 	//page Teachers

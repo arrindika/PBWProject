@@ -53,8 +53,12 @@
               <div class="panel-body">
                 <div class="col-md-3">
                   <div class="well dash-box">
-                    <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 203</h2>
-                    <h4>Users</h4>
+                    <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <?php
+                            echo $this->db->count_all('dataguru');
+                        ?>
+                    </h2>
+                    <h4>Teachers</h4>
                   </div>
                 </div>
                 <div class="col-md-3">
@@ -70,7 +74,7 @@
                 <div class="col-md-3">
                   <div class="well dash-box">
                     <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 33</h2>
-                    <h4>Posts</h4>
+                    <h4>News</h4>
                   </div>
                 </div>
                 <div class="col-md-3">
@@ -83,7 +87,7 @@
               </div>
 
               <!-- Latest Users -->
-              <div class="panel panel-default">
+              <!-- <div class="panel panel-default">
                 <div class="panel-heading">
                   <h3 class="panel-title">Latest Users</h3>
                 </div>
@@ -121,14 +125,14 @@
                       </tr>
                     </table>
                 </div>
-              </div>
+              </div> -->
           </div>
         </div>
       </div>
     </section>
 
     <footer id="footer">
-      <p>Copyright AdminStrap, &copy; 2017</p>
+      <p>SMPK ST THERESIA KUPANG, &copy; 2018</p>
     </footer>
 
     <!-- Modals -->

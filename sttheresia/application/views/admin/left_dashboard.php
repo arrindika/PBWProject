@@ -2,7 +2,7 @@
     <a href="<?php echo base_url(); ?>admin/index" class="list-group-item active main-color-bg">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
     </a>
-    <a href="<?php echo base_url(); ?>admin/posts" class="list-group-item">
+    <a href="<?php echo base_url(); ?>admin/news" class="list-group-item">
         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
         News
         <span class="badge">33</span>
@@ -23,6 +23,10 @@
     <a href="<?php echo base_url(); ?>admin/teachers" class="list-group-item">
         <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
         Teachers
-        <span class="badge">203</span>
+        <span class="badge">
+            <?php
+                echo $this->db->count_all('dataguru');
+            ?>
+        </span>
     </a>
 </div>

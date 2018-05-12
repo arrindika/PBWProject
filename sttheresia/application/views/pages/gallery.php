@@ -17,15 +17,21 @@
 
 	<div class="content">
 		<div class="container">
-			<h1 class="single">Guru Pengajar SMPK St. Theresia Kupang</h1>
+			<h1 class="single">Our Galeries</h1>
 
 			<div class="main-content">
 				<div class="slider-con">
 					<ul class="bxslider">
 						<li>
-							<div class="slide">
+							<div class="slide container">
 								<ul>
-
+									<li><b>Galeri Piala 1</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/prestasi1.jpeg" alt="Galeri Piala Prestasi #1"></a></li>
+									<li><b>Galeri Piala 2</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/prestasi2.jpeg" alt="Galeri Piala Prestasi #2"></a></li>
+									<li><b>Lapangan Olahraga & Upacara</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/lapangan.jpeg" alt="Lapangan Olahraga & Upacara"></a></li>
+									<li><b>Lab Komputer</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/labkomputer.jpeg" alt="Lab Komputer"></a></li>
+									<li><b>Ruang Guru</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/ruangguru.jpeg" alt="Ruang Guru"></a></li>
+									<li><b>Ruang Kelas</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/ruangkelas.jpeg" alt="Ruang Kelas"></a></li>
+									<li><b>Taman Mini</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/tamanmini.jpeg" alt="Taman Mini"></a></li>
 								</ul>
 							</div>
 						</li>
