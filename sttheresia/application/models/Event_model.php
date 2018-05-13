@@ -4,17 +4,18 @@
      */
     class Event_model extends CI_Model
     {
-        public function insert_event($eventTitle,$eventBody,$eventDateTime,$eventLocation){
+        public function insert_event($eventTitle,$eventBody,$eventDate,$eventLocation){
             $data = array(
                 'eventTitle' => $eventTitle,
                 'eventBody' => $eventBody,
-                'eventDateTime' => $eventDateTime,
+                'eventDate' => $eventDate,
                 'eventLocation' => $eventLocation
             );
             $this->db->insert('event', $data);
         }
         public function select_events()
         {
+            $this->db->order_by('eventDate', 'ASC');
             $query = $this->db->get('event');
             return $query->result();
         }
@@ -24,11 +25,11 @@
             $query = $this->db->get('event');
             return $query->result();
         }
-        public function update_event_where_id($id,$eventTitle,$eventBody,$eventDateTime,$eventLocation){
+        public function update_event_where_id($id,$eventTitle,$eventBody,$eventDate,$eventLocation){
             $data = array(
                 'eventTitle' => $eventTitle,
                 'eventBody' => $eventBody,
-                'eventDateTime' => $eventDateTime,
+                'eventDate' => $eventDate,
                 'eventLocation' => $eventLocation
             );
             $this->db->where('id', $id);
@@ -42,7 +43,7 @@
 
         public function select_events_four_nearest()
         {
-            $this->db->order_by('eventDateTime', 'ASC');
+            $this->db->order_by('eventDate', 'ASC');
             $this->db->limit(4);
             $query = $this->db->get('event');
             return $query->result();

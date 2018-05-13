@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Bulan Mei 2018 pada 20.42
+-- Waktu pembuatan: 13 Bulan Mei 2018 pada 19.25
 -- Versi server: 10.1.31-MariaDB
 -- Versi PHP: 7.0.28
 
@@ -78,7 +78,7 @@ CREATE TABLE `event` (
   `id` int(10) NOT NULL,
   `eventTitle` varchar(100) NOT NULL,
   `eventBody` text NOT NULL,
-  `eventDateTime` datetime NOT NULL,
+  `eventDate` date NOT NULL,
   `eventLocation` varchar(100) NOT NULL,
   `timeStamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -87,12 +87,11 @@ CREATE TABLE `event` (
 -- Dumping data untuk tabel `event`
 --
 
-INSERT INTO `event` (`id`, `eventTitle`, `eventBody`, `eventDateTime`, `eventLocation`, `timeStamp`) VALUES
-(8, 'Pahamh Cantik', '\r\nTom Holland\r\nTom Holland by Gage Skidmore.jpg\r\nHolland at the 2016 San Diego Comic-Con promoting Spider-Man: Homecoming\r\nBorn	Thomas Stanley Holland[1]\r\n1 June 1996 (age 21)\r\nKingston upon Thames, London, England\r\nEducation	Donhead Prep School\r\nWimbledon College\r\nThe BRIT School for Performing Arts and Technology\r\nOccupation	\r\nActor dancer\r\nYears active	2008–present\r\nParent(s)	Dominic Holland\r\nNicola Frost\r\nThomas Stanley \"Tom\" Holland (born 1 June 1996)[2] is an English actor and dancer. He is best known for playing Spider-Man in the Marvel Cinematic Universe (MCU) films Captain America: Civil War (2016), Spider-Man: Homecoming (2017), and Avengers: Infinity War (2018).\r\n\r\nHolland previously appeared on stage in the title role of Billy Elliot the Musical in London\'s West End. His other major films include The Impossible (2012), In the Heart of the Sea (2015), and The Lost City of Z (2016). Holland received the BAFTA Rising Star Award in 2017.\r\nTom Holland\r\nTom Holland by Gage Skidmore.jpg\r\nHolland at the 2016 San Diego Comic-Con promoting Spider-Man: Homecoming\r\nBorn	Thomas Stanley Holland[1]\r\n1 June 1996 (age 21)\r\nKingston upon Thames, London, England\r\nEducation	Donhead Prep School\r\nWimbledon College\r\nThe BRIT School for Performing Arts and Technology\r\nOccupation	\r\nActor dancer\r\nYears active	2008–present\r\nParent(s)	Dominic Holland\r\nNicola Frost\r\nThomas Stanley \"Tom\" Holland (born 1 June 1996)[2] is an English actor and dancer. He is best known for playing Spider-Man in the Marvel Cinematic Universe (MCU) films Captain America: Civil War (2016), Spider-Man: Homecoming (2017), and Avengers: Infinity War (2018).\r\n\r\nHolland previously appeared on stage in the title role of Billy Elliot the Musical in London\'s West End. His other major films include The Impossible (2012), In the Heart of the Sea (2015), and The Lost City of Z (2016). Holland received the BAFTA Rising Star Award in 2017.', '2018-01-01 02:01:00', 'SMP', '2018-05-07 10:38:36'),
-(9, 'Pahhjh', 'Tom Holland\r\nT', '2018-01-01 13:01:00', 'ITS', '2018-05-07 10:46:04'),
-(10, 'KSHAJSHJ', '\r\nTom Holland\r\nTom Holland by Gage Skidmore.jpg\r\nHolland at the 2016 San Diego Comic-Con promoting Spider-Man: Homecoming\r\nBorn	Thomas Stanley Holland[1]\r\n1 June 1996 (age 21)\r\nKingston upon Thames, London, England\r\nEducation	Donhead Prep School\r\nWimbledon College\r\nThe BRIT School for Performing Arts and Technology\r\nOccupation	\r\nActor dancer\r\nYears active	2008–present\r\nParent(s)	Dominic Holland\r\nNicola Frost\r\nThomas Stanley \"Tom\" Holland (born 1 June 1996)[2] is an English actor and dancer. He is best known for playing Spider-Man in the Marvel Cinematic Universe (MCU) films Captain America: Civil War (2016), Spider-Man: Homecoming (2017), and Avengers: Infinity War (2018).\r\n\r\nHolland previously appeared on stage in the title role of Billy Elliot the Musical in London\'s West End. His other major films include The Impossible (2012), In the Heart of the Sea (2015), and The Lost City of Z (2016). Holland received the BAFTA Rising Star Award in 2017.', '2018-01-01 01:00:00', 'J', '2018-05-07 10:38:58'),
-(11, 'Paha ayam', 'Tom Holland\r\nTom Holland by Gage Skidmore.jpg\r\nHolland at the ', '2018-12-31 12:59:00', 'ITS', '2018-05-07 10:45:16'),
-(12, 'Taian', '\r\nTom Holland\r\nTom Holland by Gage Skidmore.jpg\r\nHolland at the 2016 San Diego Comic-Con promoting Spider-Man: Homecoming\r\nBorn	Thomas Stanley Holland[1]\r\n1 June 1996 (age 21)\r\nKingston upon Thames, London, England\r\nEducation	Donhead Prep School\r\nWimbledon College\r\nThe BRIT School for Performing Arts and Technology\r\nOccupation	\r\nActor dancer\r\nYears active	2008–present\r\nParent(s)	Dominic Holland\r\nNicola Frost\r\nThomas Stanley \"Tom\" Holland (born 1 June 1996)[2] is an English actor and dancer. He is best known for playing Spider-Man in the Marvel Cinematic Universe (MCU) films Captain America: Civil War (2016), Spider-Man: Homecoming (2017), and Avengers: Infinity War (2018).\r\n\r\nHolland previously appeared on stage in the title role of Billy Elliot the Musical in London\'s West End. His other major films include The Impossible (2012), In the Heart of the Sea (2015), and The Lost City of Z (2016). Holland received the BAFTA Rising Star Award in 2017.', '2016-12-31 01:00:00', 'SMP', '2018-05-07 10:39:38');
+INSERT INTO `event` (`id`, `eventTitle`, `eventBody`, `eventDate`, `eventLocation`, `timeStamp`) VALUES
+(13, 'Test 1', 'Apakah Berhasil ?', '2018-05-13', 'Sekolah', '2018-05-13 17:17:08'),
+(14, 'Test 2', 'Aakah berhasil lagi ?', '2018-05-21', 'Sekolah', '2018-05-13 17:19:58'),
+(15, 'Test 3', 'Apakah Berhasil Lagi ?', '2018-05-22', 'Sekolah', '2018-05-13 17:21:11'),
+(16, 'Test 4', 'Apakah Berhasil Lagi ?', '2018-05-29', 'Sekolah', '2018-05-13 17:21:32');
 
 -- --------------------------------------------------------
 
@@ -114,8 +113,9 @@ CREATE TABLE `info` (
 --
 
 INSERT INTO `info` (`id`, `newsTitle`, `newsBody`, `newsDate`, `newsAuthor`, `timeStamp`) VALUES
-(1, 'Halo namaku tian', 'taing iiashahsdashjahsjahsjhajshj', '2018-05-15', 'Tian', '2018-05-11 09:34:44'),
-(2, 'HHAHAHHAH', 'If you find that the syntax described in this page does not work on your server it might be that “short tags” are disabled in your PHP ini file. CodeIgniter will optionally rewrite short tags on-the-fly, allowing you to use that syntax even if your server doesn’t support it. This feature can be enabled in your config/config.php file.\r\n\r\nPlease note that if you do use this feature, if PHP errors are encountered in your view files, the error message and line number will not be accurately shown. Instead, all errors will be shown as eval() errors.\r\nAlternative Echos\r\n\r\nNormally to echo, or print out a variable you would do this:\r\n\r\n<?php echo $variable; ?>\r\n\r\nWith the alternative syntax you can instead do it this way:\r\n\r\n<?=$variable?>\r\n\r\n', '2018-05-10', 'qqqqq', '2018-05-11 11:00:01');
+(1, 'Memukau! Tarian Hegong Siswi SMPK St Theresia Kupang', 'Grand launching aplikasi School Talk dihelat, Senin (7/5/2018) siang.\r\n\r\nAcara pembukaan semakin semarak, ketika tarian Hegong ditampilkan di salah satu ruangan di Hotel Swiss Belin Kristal Kupang.\r\n\r\nTarian yang dipentaskan siswi-siswi dari SMPK St. Theresia Kupang begitu memukau hadirin yang hadir di acara tersebut.\r\n\r\n\r\n\r\nArtikel ini telah tayang di pos-kupang.com dengan judul Memukau! Tarian Hegong Siswi SMPK St Theresia Kupang, http://kupang.tribunnews.com/2018/05/07/memukau-tarian-hegong-siswi-smpk-st-theresia-kupang.\r\nPenulis: Lexy Manafe\r\nEditor: OMDSMY Novemy Leo ', '2018-05-07', 'Penulis: Lexy Manafe Editor: OMDSMY Novemy Leo ', '2018-05-13 16:35:42'),
+(2, 'Hadapi UNBK 2018, ini lho yang dilakukan SMPK ST THERESIA Kuppang', 'POS-KUPANG.COM|KUPANG - Menjelang Ujian Nasional Berbasis Komputer (UNBK) yang akan diselenggarakan dalam waktu dekat ini.\r\n\r\nBanyak persiapan yang dilakukan oleh masing-masing sekolah agar semua siswanya bisa siap menghadapi UNBK.  Tak terkecuali SMPK St. Theresia Kupang.\r\n\r\nKepala sekolah SMPK St. Theresia Kupang Sr. Dafrosa Muti,SSpS saat ditemui Selasa (27/2/2018) mengatakan, sekolahnya sedang dalam proses mempersiapkan siswa-siswinya untuk mengikuti UNBK nanti.\r\n\r\nAdapun persiapan yang dilakukan salah satunya adalah mengadakan les tambahan setelah jam  kegiatan belajar mengajar (KBM).\r\n\r\n\"Ada les tambahan juga setelah jam KBM mereka makan siang dulu baru kita lanjut les.\r\n\r\nSelain materi juga lebih banyak mengerjakan soal-soal ujian yang sudah pernah ada dua atau tiga tahun lalu, dan ini sudah sejak Agustus tahun 2017,\" ujar Dafrosa.\r\n\r\nSelain itu anak-anak juga dibekali dengan try out yang sampai saat ini sudah digelar sebanyak dua kali.\r\n\r\nSelain les dan try out siswanya juga diberi pelatihan atau simulasi UNBK.\r\n\r\n\r\n\r\nArtikel ini telah tayang di pos-kupang.com dengan judul Hadapi UNBK 2018, Ini Loh Yang Dilakukan SMPK St. Theresia Kupang, http://kupang.tribunnews.com/2018/02/27/hadapi-unbk-2018-ini-loh-yang-dilakukan-smpk-st-theresia-kupang.\r\n', '2018-02-27', 'Penulis: Maria Enotoda Editor: Fredrikus Royanto Bau ', '2018-05-13 16:39:06'),
+(3, 'Test 1', 'Test, apakah berhasil ?', '2018-05-13', 'Tian', '2018-05-13 16:42:44');
 
 --
 -- Indexes for dumped tables
@@ -165,13 +165,13 @@ ALTER TABLE `dataguru`
 -- AUTO_INCREMENT untuk tabel `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `info`
 --
 ALTER TABLE `info`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

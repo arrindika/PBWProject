@@ -18,26 +18,7 @@
 			<li>
 				<div class="container">
 					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="#">Check out our new programs</a>
-					</div>
-				</div>
-				<!-- / content -->
-			</li>
-			<li>
-				<div class="container">
-					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="#">Check out our new programs</a>
-					</div>
-				</div>
-				<!-- / content -->
-			</li>
-			<li>
-				<div class="container">
-					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
-						<a href="#">Check out our new programs</a>
+						<h2>Sejarah Sekolah<br><span>SMPK ST Theresia Kupang</span></h2>
 					</div>
 				</div>
 				<!-- / content -->
@@ -123,7 +104,7 @@
 		</div>
 		<!-- / container -->
 	</section>
-	
+
 	<div class="container">
 		<a href="#fancy" class="info-request">
 			<span class="holder">

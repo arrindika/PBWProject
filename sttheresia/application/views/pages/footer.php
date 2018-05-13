@@ -33,11 +33,11 @@
             <ul>
                 <section class="posts-con">
                     <?php
-                        if (isset($upcomingEvent)) {
-                            foreach ($upcomingEvent as $event) {
+                        if (isset($latestNews)) {
+                            foreach ($latestNews as $news) {
                                 echo "
                                     <li>
-                                            <a href='events'>$event->eventTitle</a>
+                                            <a href='events'>$news->newsTitle</a>
                                     </li>
                                 ";
                             }

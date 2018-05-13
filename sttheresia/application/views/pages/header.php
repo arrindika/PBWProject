@@ -1,6 +1,6 @@
 	<header id="header">
 		<div class="container">
-			<a href="<?php echo base_url(); ?>pages/view" id="logo" title="SMPK ST THERESIA KUPANG">SMPK ST THERESIA KUPANG</a>
+			<a href="<?php echo base_url(); ?>" id="logo" title="SMPK ST THERESIA KUPANG">SMPK ST THERESIA KUPANG</a>
 			<div class="menu-trigger"></div>
 			<nav id="menu">
 				<ul>

@@ -46,20 +46,7 @@
                   include ('left_dashboard.php');
               ?>
 
-            <div class="well">
-              <h4>Disk Space Used</h4>
-              <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                      60%
-              </div>
-            </div>
-            <h4>Bandwidth Used </h4>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                    40%
-            </div>
-          </div>
-            </div>
+
           </div>
           <div class="col-md-9">
             <!-- Website Overview -->
@@ -80,11 +67,6 @@
                             <label>News Body</label>
                             <textarea name='newsBody' class='form-control' placeholder='Page Body'></textarea>
                           </div>
-                          <!-- <div class='checkbox'>
-                            <label>
-                              <input type='checkbox' checked> Published
-                            </label>
-                          </div> -->
                           <div class='form-group'>
                               <label>news Date</label>
                               <input class='form-control' name='newsDate' id='date' type='date'>

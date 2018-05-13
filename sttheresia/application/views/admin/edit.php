@@ -20,7 +20,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Upcoming Events Page <small>Manage Your Upcoming News</small></h1>
+            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Upcoming Events Page <small>Manage Your Upcoming Events</small></h1>
           </div>
           <div class="col-md-2">
           </div>
@@ -45,20 +45,6 @@
                 include ('left_dashboard.php');
             ?>
 
-            <div class="well">
-              <h4>Disk Space Used</h4>
-              <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                      60%
-              </div>
-            </div>
-            <h4>Bandwidth Used </h4>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                    40%
-            </div>
-          </div>
-            </div>
           </div>
           <div class="col-md-9">
 
@@ -73,22 +59,16 @@
                       <div class='panel-body'>
                         <form action='submitevent' method='post'>
                           <div class='form-group'>
-                            <label>News Title</label>
+                            <label>Event Title</label>
                             <input type='text' name='eventTitle' class='form-control' placeholder='Page Title' value=''>
                           </div>
                           <div class='form-group'>
-                            <label>News Body</label>
+                            <label>Event Body</label>
                             <textarea name='eventBody' class='form-control' placeholder='Page Body'></textarea>
                           </div>
-                          <!-- <div class='checkbox'>
-                            <label>
-                              <input type='checkbox' checked> Published
-                            </label>
-                          </div> -->
                           <div class='form-group'>
                               <label>Events Date</label>
-                              <!--<input class='form-control' name='eventDateTime' id='date' type='date'>-->
-                              <input id='time' class='form-control' name='eventDateTime' type='datetime-local'>
+                              <input class='form-control' name='eventDate' id='date' type='date'>
                           </div>
                           <div class='form-group'>
                             <label>Event Location</label>
@@ -100,9 +80,10 @@
                       </div>
                     ";
                 }else{
-                    $date = date("Y-m-d", strtotime($eventEdit->eventDateTime));
-                    $time = date("H:i:s", strtotime($eventEdit->eventDateTime));
-                    $dateTime = $date."T".$time;
+                    $date = date("Y-m-d", strtotime($eventEdit->eventDate));
+                    //$time = date("H:i:s", strtotime($eventEdit->eventDate));
+                    $dateTime = $date;
+                    //."T".$time;
                     echo "
                     <div id='edit-event' class='panel panel-default'>
                       <div class='panel-heading main-color-bg'>
@@ -126,7 +107,7 @@
                           </div> -->
                           <div class='form-group'>
                               <label>Events Date</label>
-                              <input class='form-control' name='eventDateTime' type='datetime-local' value='$dateTime'>
+                              <input class='form-control' name='eventDate' type='datetime-local' value='$dateTime'>
                           </div>
                           <div class='form-group'>
                             <label>Event Location</label>
@@ -165,12 +146,12 @@
                             $editID = NULL;
     						if (isset($events)) {
     							foreach ($events as $event) {
-    								$eventMonth = date('F', strtotime($event->eventDateTime));
-    								$eventDay = date('d', strtotime($event->eventDateTime));
+    								$eventMonth = date('F', strtotime($event->eventDate));
+    								$eventDay = date('d', strtotime($event->eventDate));
     								echo "
                                     <tr>
                                         <td>$event->eventTitle</td>
-                                        <td>$event->eventDateTime</td>
+                                        <td>$event->eventDate</td>
                                         <td>$event->eventLocation</td>
                                         <form action='edit' method='post'>
                                             <input hidden type='text' name='edit-id' value='$event->id'>

@@ -27,8 +27,6 @@ class pages extends CI_Controller {
                 $data['latestNews'] = $this->news_model->select_news_two_nearest();
                 $this->load->model('event_model');
                 $data['upcomingEvent'] = $this->event_model->select_events_four_nearest();
-                $this->load->model('news_model');
-                $data['upcomingEvent'] = $this->event_model->select_news();
                 $this->load->helper('url');
                 $this->load->view('pages/'.$page, $data);
         }

@@ -13,7 +13,20 @@
 <body>
     <?php include ('header.php'); ?>
 
-	<div class="divider"></div>
+	<div class="slider">
+		<ul class="bxslider">
+			<li>
+				<div class="container">
+					<div class="info">
+						<h2>Info / Berita<br><span>SMPK ST Theresia Kupang</span></h2>
+						<a href="<?php echo base_url(); ?>pages/sejarahsekolah">Sejarah Sekolah SMPK ST Theresia</a>
+					</div>
+				</div>
+				<!-- / content -->
+			</li>
+		</ul>
+		<div class="bg-bottom"></div>
+	</div>
 
 	<div class="content">
 		<div class="container">

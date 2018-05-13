@@ -12,8 +12,19 @@
 </head>
 <body>
 	<?php include ('header.php'); ?>
-
-	<div class="divider"></div>
+	<div class="slider">
+		<ul class="bxslider">
+			<li>
+				<div class="container">
+					<div class="info">
+						<h2>Kegiatan Akan Datang<br><span>SMPK ST Theresia Kupang</span></h2>
+					</div>
+				</div>
+				<!-- / content -->
+			</li>
+		</ul>
+		<div class="bg-bottom"></div>
+	</div>
 
 	<div class="content">
 		<div class="container">
@@ -24,9 +35,9 @@
 					<?php
 						if (isset($events)) {
 							foreach ($events as $event) {
-								$eventMonth = date('F', strtotime($event->eventDateTime));
-								$eventDay = date('d', strtotime($event->eventDateTime));
-								$eventTime = date("H:i", strtotime($event->eventDateTime));
+								$eventMonth = date('F', strtotime($event->eventDate));
+								$eventDay = date('d', strtotime($event->eventDate));
+								$eventTime = date("H:i", strtotime($event->eventDate));
 								echo "
 									<article>
 										<div class='current-date'>

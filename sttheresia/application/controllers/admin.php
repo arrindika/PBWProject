@@ -30,8 +30,10 @@ class Admin extends CI_Controller{
 	// 	// 		$this->load->view('login_admin');
 	// 	// 	}
 	// }
-
-
+	function index($msg = NULL){
+		$data['msg'] = $msg;
+		$this->load->view('login_admin',$data);
+	}
 	//page events
 	public function edit(){
 		$this->load->model('event_model');
@@ -56,9 +58,9 @@ class Admin extends CI_Controller{
 		$this->load->model('event_model');
 		$eventTitle = $this->event_model->input->post('eventTitle');
 		$eventBody = $this->event_model->input->post('eventBody');
-		$eventDateTime = $this->event_model->input->post('eventDateTime');
+		$eventDate = $this->event_model->input->post('eventDate');
 		$eventLocation = $this->event_model->input->post('eventLocation');
-		$this->event_model->insert_event($eventTitle,$eventBody,$eventDateTime,$eventLocation);
+		$this->event_model->insert_event($eventTitle,$eventBody,$eventDate,$eventLocation);
 		redirect(base_url().'admin/edit');
 	}
 	public function editevent()
@@ -67,9 +69,9 @@ class Admin extends CI_Controller{
 		$id = $this->event_model->input->post('id');
 		$eventTitle = $this->event_model->input->post('eventTitle');
 		$eventBody = $this->event_model->input->post('eventBody');
-		$eventDateTime = $this->event_model->input->post('eventDateTime');
+		$eventDate = $this->event_model->input->post('eventDate');
 		$eventLocation = $this->event_model->input->post('eventLocation');
-		$this->event_model->update_event_where_id($id,$eventTitle,$eventBody,$eventDateTime,$eventLocation);
+		$this->event_model->update_event_where_id($id,$eventTitle,$eventBody,$eventDate,$eventLocation);
 		redirect(base_url().'admin/edit');
 	}
 

@@ -18,7 +18,7 @@
 			<li>
 				<div class="container">
 					<div class="info">
-						<h2>It’s Time to <br><span>Get back to school</span></h2>
+						<h2>Selamat Datang di<br><span>SMPK ST Theresia Kupang</span></h2>
 						<a href="<?php echo base_url(); ?>pages/sejarahsekolah">Sejarah Sekolah SMPK ST Theresia</a>
 					</div>
 				</div>
@@ -99,11 +99,11 @@
 									<article>
 										<h4>
 											<b>$news->newsTitle</b>
-											<p class='date'>$news->newsDate, Pesan Dari : $news->newsAuthor</p>
+											<p class='date'>$news->newsDate, $news->newsAuthor</p>
 										</h4>
 										<div class='info'>
 											<p>$newsMiniBody</p>
-											<a class='more' href='news'>Read more</a>
+											<a class='more' href='pages/news'>Read more</a>
 										</div>
 									</article>
 								";
@@ -132,9 +132,9 @@
 						else {
 							$eventMiniBody = $event->eventBody;
 						}
-						$eventMonth = date('F', strtotime($event->eventDateTime));
-						$eventDay = date('d', strtotime($event->eventDateTime));
-						$eventTime = date("H:i", strtotime($event->eventDateTime));
+						$eventMonth = date('F', strtotime($event->eventDate));
+						$eventDay = date('d', strtotime($event->eventDate));
+						$eventTime = date("H:i", strtotime($event->eventDate));
 						echo "
 							<article>
 								<div class='current-date'>
@@ -143,7 +143,7 @@
 								</div>
 								<div class='info'>
 									<p>$eventMiniBody</p>
-									<a class='more' href='events'>Read more</a>
+									<a class='more' href='pages/events'>Read more</a>
 								</div>
 							</article>
 						";
