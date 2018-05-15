@@ -30,9 +30,9 @@ class Admin extends CI_Controller{
 	// 	// 		$this->load->view('login_admin');
 	// 	// 	}
 	// }
-	function index($msg = NULL){
-		$data['msg'] = $msg;
-		$this->load->view('login_admin',$data);
+	function index(){
+		$this->session->sess_destroy();
+		redirect(base_url("login"));
 	}
 	//page events
 	public function event(){

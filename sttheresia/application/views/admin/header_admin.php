@@ -19,7 +19,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Welcome, ADMIN</a></li>
-        <li><a href="<?php echo base_url(); ?>login">Logout</a></li>
+        <li><a href="<?php echo base_url(); ?>login/logout">Logout</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

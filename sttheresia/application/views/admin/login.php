@@ -43,14 +43,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-md-offset-4">
-            <form id="login" action="<?php echo base_url(); ?>admin/login" class="well">
+            <form id="login" action="<?php echo base_url(); ?>login/aksi_login" class="well" method="post">
                   <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="text" class="form-control" placeholder="Enter Email">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control" placeholder="Enter Username">
                   </div>
                   <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
                   </div>
                   <button type="submit" class="btn btn-default btn-block">Login</button>
               </form>
