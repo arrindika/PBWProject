@@ -12,6 +12,7 @@
 					<li><a href="<?php echo base_url(); ?>pages/teachers">Guru<br>Pengajar<br></a></li>
 					<li><a href="<?php echo base_url(); ?>pages/gallery">Gallery</a></li>
 					<li><a href="<?php echo base_url(); ?>pages/contact" class="get-contact">Contact</a></li>
+                    <li><a href="<?php echo base_url(); ?>pages/elearning">E-Learning</a></li>
    				</ul>
 			</nav>
 			<!-- / navigation -->

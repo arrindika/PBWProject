@@ -16,6 +16,21 @@ class pages extends CI_Controller {
                 $this->load->helper('url');
                 $this->load->view('pages/'.$page, $data);
         }
+        public function view($page = 'elearning')
+        {
+            if ( ! file_exists(APPPATH.'views/elearning/'.$page.'.php'))
+                {
+                    show_404();
+                }
+
+                $data['title'] = ucfirst($page);
+                $this->load->model('news_model');
+                $data['latestNews'] = $this->news_model->select_news_two_nearest();
+                $this->load->model('event_model');
+                $data['upcomingEvent'] = $this->event_model->select_events_four_nearest();
+                $this->load->helper('url');
+                $this->load->view('pages/'.$page, $data);
+        }
         public function gallery($page = 'gallery'){
             if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
                 {
