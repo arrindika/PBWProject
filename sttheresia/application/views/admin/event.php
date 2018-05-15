@@ -54,25 +54,29 @@
                     echo "
                     <div id='add-event' class='panel panel-default'>
                       <div class='panel-heading main-color-bg'>
-                        <h3 class='panel-title'>Add Events</h3>
+                        <h3 class='panel-title'>Tambah Data Kegiatan</h3>
                       </div>
                       <div class='panel-body'>
                         <form action='submitevent' method='post'>
                           <div class='form-group'>
-                            <label>Event Title</label>
-                            <input type='text' name='eventTitle' class='form-control' placeholder='Page Title' value=''>
+                            <label>Nama Event</label>
+                            <input type='text' name='eventTitle' class='form-control' placeholder='Nama Event' value=''>
                           </div>
                           <div class='form-group'>
-                            <label>Event Body</label>
-                            <textarea name='eventBody' class='form-control' placeholder='Page Body'></textarea>
+                            <label>Keterangan Event</label>
+                            <textarea name='eventBody' class='form-control' placeholder='Keterangan atau Penjelasan tentang Event'></textarea>
                           </div>
                           <div class='form-group'>
-                              <label>Events Date</label>
+                              <label>Tanggal Kegiatan</label>
                               <input class='form-control' name='eventDate' id='date' type='date'>
                           </div>
                           <div class='form-group'>
-                            <label>Event Location</label>
-                            <input type='text' name='eventLocation' class='form-control' placeholder='Event Location' value=''>
+                              <label>Waktu Pelaksanaan Kegiatan</label>
+                              <input class='form-control' name='eventTime' id='time' type='time'>
+                          </div>
+                          <div class='form-group'>
+                            <label>Lokasi Kegiatan</label>
+                            <input type='text' name='eventLocation' class='form-control' placeholder='Lokasi Kegiatan atau Event' value=''>
                           </div>
                           <input type='submit' class='btn btn-default' value='Submit'>
                         </form>
@@ -81,13 +85,11 @@
                     ";
                 }else{
                     $date = date("Y-m-d", strtotime($eventEdit->eventDate));
-                    //$time = date("H:i:s", strtotime($eventEdit->eventDate));
-                    $dateTime = $date;
-                    //."T".$time;
+                    $time = date("H:i", strtotime($eventEdit->eventTime));
                     echo "
                     <div id='edit-event' class='panel panel-default'>
                       <div class='panel-heading main-color-bg'>
-                        <h3 class='panel-title'>Edit Events</h3>
+                        <h3 class='panel-title'>Edit Data Kegiatan</h3>
                       </div>
                       <div class='panel-body'>
                         <form action='editevent' method='post'>
@@ -107,7 +109,11 @@
                           </div> -->
                           <div class='form-group'>
                               <label>Events Date</label>
-                              <input class='form-control' name='eventDate' type='datetime-local' value='$dateTime'>
+                              <input class='form-control' name='eventDate' type='date' value='$date'>
+                          </div>
+                          <div class='form-group'>
+                              <label>Events Time</label>
+                              <input class='form-control' name='eventTime' type='time' value='$time'>
                           </div>
                           <div class='form-group'>
                             <label>Event Location</label>
@@ -127,17 +133,13 @@
                   <h3 class="panel-title">Events</h3>
                 </div>
                 <div class="panel-body">
-                  <div class="row">
-                        <div class="col-md-12">
-                            <input class="form-control" type="text" placeholder="Filter Users...">
-                        </div>
-                  </div>
                   <br>
                   <table class="table table-striped table-hover">
                         <tr>
-                          <th>Title</th>
-                          <th>Date</th>
-                          <th>Location</th>
+                          <th>Nama Kegiatan</th>
+                          <th>Tanggal Pelaksanaan</th>
+                          <th>Waktu Pelaksanaan</th>
+                          <th>Tempat Kegiatan</th>
                           <th></th>
                           <th></th>
                         </tr>
@@ -146,14 +148,16 @@
                             $editID = NULL;
     						if (isset($events)) {
     							foreach ($events as $event) {
-    								$eventMonth = date('F', strtotime($event->eventDate));
-    								$eventDay = date('d', strtotime($event->eventDate));
+    								// $eventMonth = date('F', strtotime($event->eventDate));
+    								// $eventDay = date('d', strtotime($event->eventDate));
+                                    $eventTime = date("H:i", strtotime($event->eventTime));
     								echo "
                                     <tr>
                                         <td>$event->eventTitle</td>
                                         <td>$event->eventDate</td>
+                                        <td>$eventTime</td>
                                         <td>$event->eventLocation</td>
-                                        <form action='edit' method='post'>
+                                        <form action='event' method='post'>
                                             <input hidden type='text' name='edit-id' value='$event->id'>
                                             <td><input type='submit' class='btn btn-primary' value='Edit'></td>
                                         </form>

@@ -118,13 +118,14 @@ class pages extends CI_Controller {
              $this->email->message($message);
 
              //Send mail
-             if($this->email->send())
-                echo "sussces";
-                //$this->session->set_flashdata("email_sent","Email sent successfully.");
-             else
-                echo "error";
-                //$this->session->set_flashdata("email_sent","Error in sending Email.");
-
+             if($this->email->send()){
+                $this->session->set_flashdata("email_sent","Email sent successfully.");
+                echo "<script>alert('Email Berhasil Di kirim');</script>";
+            }
+             else{
+                $this->session->set_flashdata("email_sent","Error in sending Email.");
+                echo "<script>alert('Gagal Mengirim !');</script>";
+            }
              $this->load->view('contact');
         }
 }

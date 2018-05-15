@@ -21,7 +21,6 @@ class Login extends CI_Controller{
 			);
 		$cek = $this->login_model->cek_login("admin",$where)->num_rows();
 		if($cek > 0){
-
 			$data_session = array(
 				'nama' => $username,
 				'status' => "login"

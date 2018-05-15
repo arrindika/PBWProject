@@ -80,9 +80,9 @@
 						$eventMiniBody = substr ($event->eventBody, 0, 200);
 						$eventMiniBody = $eventMiniBody."...";
 
-						$eventMonth = date('F', strtotime($event->eventDateTime));
-						$eventDay = date('d', strtotime($event->eventDateTime));
-						$eventTime = date("H:i", strtotime($event->eventDateTime));
+						$eventMonth = date('F', strtotime($event->eventDate));
+						$eventDay = date('d', strtotime($event->eventDate));
+						$eventTime = date("H:i", strtotime($event->eventTime));
 						echo "
 							<article>
 								<div class='current-date'>
@@ -118,8 +118,8 @@
 	<?php include ('footer.php') ?>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script>window.jQuery || document.write("<script src='<?php echo base_url();?>js/jquery-1.11.1.min.js'>\x3C/script>")</script>
-	<script src="<?php echo base_url(); ?>js/plugins.js"></script>
-	<script src="<?php echo base_url(); ?>js/main.js"></script>
+	<script>window.jQuery || document.write("<script src='<?php echo base_url();?>assets/js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+	<script src="<?php echo base_url(); ?>assets/js/plugins.js"></script>
+	<script src="<?php echo base_url(); ?>assets/js/main.js"></script>
 </body>
 </html>

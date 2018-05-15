@@ -49,60 +49,6 @@
           </div>
           <div class="col-md-9">
 
-            <!-- <div id='add-event' class='panel panel-default'>
-                <div class='panel-heading main-color-bg'>
-                  <h3 class='panel-title'>Add Teachers</h3>
-                </div>
-                <div class='panel-body'>
-                    <form action='submitdataguru' method='post'>
-                    <div class='form-group col-md-6'>
-                      <label>Nama</label>
-                      <input type='text' name='nama' class='form-control' placeholder='Page Title' value=''>
-                    </div>
-                    <div class='form-group col-md-6'>
-                      <label>NIP</label>
-                      <input type='text' name='nip' class='form-control' placeholder='NIP Guru. Kosongkan jika tidak ada' value=''>
-                    </div>
-                    <div class='form-group col-md-6'>
-                        <label>Tanggal Lahir</label>
-                        <input class='form-control' name='tanggal_lahir' id='date' type='date'>
-                    </div>
-                    <div class='form-group col-md-6'>
-                      <label>Jenis Kelamin</label>
-                      <select class='form-control' name="jenis_kelamin">
-                          <option value="" selected>Pilih...</option>
-                          <option value="L">L</option>
-                          <option value="P">P</option>
-                        </select>
-                    </div>
-                    <div class='form-group col-md-6'>
-                      <label>Ijazah Pendidikan</label>
-                      <input type='text' name='pendidikan_ijazah' class='form-control' placeholder='Ijazah Pendidikan' value=''>
-                    </div>
-                    <div class='form-group col-md-6'>
-                        <label>Tahun Lulus</label>
-                        <input class='form-control' name='pendidikan_tahun' id='date' type=date>
-                    </div>
-                    <div class='form-group col-md-6'>
-                      <label>Pendidikan Tingkat</label>
-                      <input type='text' name='pendidikan_tingkat' class='form-control' placeholder='Pendidikan Tingkat' value=''>
-                    </div>
-                    <div class='form-group col-md-6'>
-                      <label>Pendidikan Jurusan</label>
-                      <input type='text' name='pendidikan_jurusan' class='form-control' placeholder='Pendidikan Jurusan' value=''>
-                    </div>
-                    <div class='form-group col-md-6'>
-                        <label>Mulai Kerja</label>
-                        <input class='form-control' name='mulai_kerja' id='date' type='date'>
-                    </div>
-                    <div class='form-group col-md-9'>
-                        <input type='submit' class='btn btn-default' value='Submit'>
-                    </div>
-
-                  </form>
-                </div>
-            </div> -->
-
             <!-- Website Overview -->
             <?php
                 if(!isset($dataguruEdit)){

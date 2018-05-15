@@ -60,20 +60,20 @@
                       <div class='panel-body'>
                         <form action='submitnews' method='post'>
                           <div class='form-group'>
-                            <label>News Title</label>
-                            <input type='text' name='newsTitle' class='form-control' placeholder='Page Title' value=''>
+                            <label>Judul Berita</label>
+                            <input type='text' name='newsTitle' class='form-control' placeholder='Judul Berita' value=''>
                           </div>
                           <div class='form-group'>
-                            <label>News Body</label>
-                            <textarea name='newsBody' class='form-control' placeholder='Page Body'></textarea>
+                            <label>Isi Berita</label>
+                            <textarea name='newsBody' class='form-control' placeholder='Isi Berita'></textarea>
                           </div>
                           <div class='form-group'>
-                              <label>news Date</label>
-                              <input class='form-control' name='newsDate' id='date' type='date'>
+                              <label>Tanggal Terbit Berita</label>
+                              <input class='form-control' name='newsDate' placeholder='Tanggal Terbit Berita' id='date' type='date'>
                           </div>
                           <div class='form-group'>
-                            <label>News Author</label>
-                            <input type='text' name='newsAuthor' class='form-control' placeholder='News Author' value=''>
+                            <label>Penulis Berita</label>
+                            <input type='text' name='newsAuthor' class='form-control' placeholder='Penulis Berita' value=''>
                           </div>
                           <input type='submit' class='btn btn-default' value='Submit'>
                         </form>
@@ -85,25 +85,25 @@
                     echo "
                     <div id='edit-news' class='panel panel-default'>
                       <div class='panel-heading main-color-bg'>
-                        <h3 class='panel-title'>Edit News</h3>
+                        <h3 class='panel-title'>Edit Data Berita</h3>
                       </div>
                       <div class='panel-body'>
                         <form action='editnews' method='post'>
                             <input hidden type='text' name='id' value='$newsEdit->id'></input>
                           <div class='form-group'>
-                            <label>News Title</label>
+                            <label>Judul Berita</label>
                             <input type='text' name='newsTitle' class='form-control' placeholder='Page Title' value='$newsEdit->newsTitle'>
                           </div>
                           <div class='form-group'>
-                            <label>News Body</label>
+                            <label>Isi Berita</label>
                             <textarea name='newsBody' class='form-control' placeholder='Page Body'>$newsEdit->newsBody</textarea>
                           </div>
                           <div class='form-group'>
-                              <label>News Date</label>
+                              <label>Tanggal Terbit Berita</label>
                               <input class='form-control' name='newsDate' type='date' value='$date'>
                           </div>
                           <div class='form-group'>
-                            <label>News Author</label>
+                            <label>Penulis Berita</label>
                             <input type='text' name='newsAuthor' class='form-control' placeholder='News Author' value='$newsEdit->newsAuthor'>
                           </div>
                           <input type='submit' class='btn btn-default' value='Submit'>
@@ -120,11 +120,6 @@
                  <h3 class="panel-title">News</h3>
                </div>
                <div class="panel-body">
-                 <div class="row">
-                       <div class="col-md-12">
-                           <input class="form-control" type="text" placeholder="Filter Users...">
-                       </div>
-                 </div>
                  <br>
                  <table class="table table-striped table-hover">
                        <tr>

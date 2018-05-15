@@ -11,7 +11,7 @@
             ?>
         </span>
     </a>
-    <a href="<?php echo base_url(); ?>admin/edit" class="list-group-item">
+    <a href="<?php echo base_url(); ?>admin/event" class="list-group-item">
         <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
         Events
         <span class="badge">
@@ -23,6 +23,15 @@
     <a href="<?php echo base_url(); ?>admin/teachers" class="list-group-item">
         <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
         Teachers
+        <span class="badge">
+            <?php
+                echo $this->db->count_all('dataguru');
+            ?>
+        </span>
+    </a>
+    <a href="<?php echo base_url(); ?>admin/gallery" class="list-group-item">
+        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+        Galley Photo
         <span class="badge">
             <?php
                 echo $this->db->count_all('dataguru');

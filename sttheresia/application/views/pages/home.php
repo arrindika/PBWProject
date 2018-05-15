@@ -142,6 +142,7 @@
 									<p class='date'>$eventDay</p>
 								</div>
 								<div class='info'>
+									<h3>$event->eventTime<h3>
 									<p>$eventMiniBody</p>
 									<a class='more' href='pages/events'>Read more</a>
 								</div>
@@ -169,8 +170,8 @@
 	<?php include ('footer.php') ?>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script>window.jQuery || document.write("<script src='<?php echo base_url();?>js/jquery-1.11.1.min.js'>\x3C/script>")</script>
-	<script src="<?php echo base_url(); ?>js/plugins.js"></script>
-	<script src="<?php echo base_url(); ?>js/main.js"></script>
+	<script>window.jQuery || document.write("<script src='<?php echo base_url();?>assets/js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+	<script src="<?php echo base_url(); ?>assets/js/plugins.js"></script>
+	<script src="<?php echo base_url(); ?>assets/js/main.js"></script>
 </body>
 </html>

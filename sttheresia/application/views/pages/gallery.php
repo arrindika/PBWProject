@@ -52,22 +52,6 @@
 					</ul>
 				</div>
 			</div>
-		<!--
-			<aside id="sidebar">
-				<div class="widget sidemenu">
-					<ul>
-						<li><a href="#">Day of teacher<span class="nr">142</span></a></li>
-						<li><a href="#">Student olympics<span class="nr">98</span></a></li>
-						<li class="current"><a href="#">The best students in 2014<span class="nr">16</span></a></li>
-						<li><a href="#">Halloween party<span class="nr">63</span></a></li>
-						<li><a href="#">School party<span class="nr">49</span></a></li>
-						<li><a href="#">Miss of university<span class="nr">175</span></a></li>
-						<li><a href="#">Karaoke party<span class="nr">87</span></a></li>
-					</ul>
-				</div>
-			</aside>
-		-->
-			<!-- / sidebar -->
 
 		</div>
 		<!-- / container -->
@@ -76,8 +60,8 @@
 	<?php include ('footer.php') ?>
 
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script>window.jQuery || document.write("<script src=<?php echo base_url(); ?>js/jquery-1.11.1.min.js'>\x3C/script>")</script>
-	<script src="<?php echo base_url(); ?>js/plugins.js"></script>
-	<script src="<?php echo base_url(); ?>js/main.js"></script>
+	<script>window.jQuery || document.write("<script src=<?php echo base_url(); ?>assets/js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+	<script src="<?php echo base_url(); ?>assets/js/plugins.js"></script>
+	<script src="<?php echo base_url(); ?>assets/js/main.js"></script>
 </body>
 </html>

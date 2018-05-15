@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Bulan Mei 2018 pada 19.25
+-- Waktu pembuatan: 15 Bulan Mei 2018 pada 09.01
 -- Versi server: 10.1.31-MariaDB
 -- Versi PHP: 7.0.28
 
@@ -79,6 +79,7 @@ CREATE TABLE `event` (
   `eventTitle` varchar(100) NOT NULL,
   `eventBody` text NOT NULL,
   `eventDate` date NOT NULL,
+  `eventTime` time NOT NULL,
   `eventLocation` varchar(100) NOT NULL,
   `timeStamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -87,11 +88,35 @@ CREATE TABLE `event` (
 -- Dumping data untuk tabel `event`
 --
 
-INSERT INTO `event` (`id`, `eventTitle`, `eventBody`, `eventDate`, `eventLocation`, `timeStamp`) VALUES
-(13, 'Test 1', 'Apakah Berhasil ?', '2018-05-13', 'Sekolah', '2018-05-13 17:17:08'),
-(14, 'Test 2', 'Aakah berhasil lagi ?', '2018-05-21', 'Sekolah', '2018-05-13 17:19:58'),
-(15, 'Test 3', 'Apakah Berhasil Lagi ?', '2018-05-22', 'Sekolah', '2018-05-13 17:21:11'),
-(16, 'Test 4', 'Apakah Berhasil Lagi ?', '2018-05-29', 'Sekolah', '2018-05-13 17:21:32');
+INSERT INTO `event` (`id`, `eventTitle`, `eventBody`, `eventDate`, `eventTime`, `eventLocation`, `timeStamp`) VALUES
+(1, 'Test 1', 'Hai There', '2018-05-24', '12:00:00', 'Sekolah', '2018-05-13 18:31:14'),
+(2, 'Test 2', 'Hai There', '2018-05-29', '15:35:00', 'Sekolah', '2018-05-13 18:31:42');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(10) NOT NULL,
+  `namaFoto` varchar(100) NOT NULL,
+  `fileFoto` varchar(100) NOT NULL,
+  `pathFoto` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `namaFoto`, `fileFoto`, `pathFoto`) VALUES
+(2, 'Lab Komputer', 'labkomputer.jpeg', 'D:/xampp/htdocs/FP/sttheresia/assets/images/galeri/labkomputer.jpeg'),
+(3, 'Lapangan', 'lapangan.jpeg', 'D:/xampp/htdocs/FP/sttheresia/assets/images/galeri/lapangan.jpeg'),
+(4, 'Prestasi #1', 'prestasi1.jpeg', 'D:/xampp/htdocs/FP/sttheresia/assets/images/galeri/prestasi1.jpeg'),
+(5, 'Prestasi #2', 'prestasi2.jpeg', 'D:/xampp/htdocs/FP/sttheresia/assets/images/galeri/prestasi2.jpeg'),
+(6, 'Ruang Guru', 'ruangguru.jpeg', 'D:/xampp/htdocs/FP/sttheresia/assets/images/galeri/ruangguru.jpeg'),
+(7, 'Ruang Kelas', 'ruangkelas.jpeg', 'D:/xampp/htdocs/FP/sttheresia/assets/images/galeri/ruangkelas.jpeg'),
+(8, 'Taman Mini', 'tamanmini.jpeg', 'D:/xampp/htdocs/FP/sttheresia/assets/images/galeri/tamanmini.jpeg');
 
 -- --------------------------------------------------------
 
@@ -140,6 +165,12 @@ ALTER TABLE `event`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `info`
 --
 ALTER TABLE `info`
@@ -165,7 +196,13 @@ ALTER TABLE `dataguru`
 -- AUTO_INCREMENT untuk tabel `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `info`

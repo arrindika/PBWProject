@@ -4,18 +4,18 @@
      */
     class Event_model extends CI_Model
     {
-        public function insert_event($eventTitle,$eventBody,$eventDate,$eventLocation){
+        public function insert_event($eventTitle,$eventBody,$eventDate,$eventTime,$eventLocation){
             $data = array(
                 'eventTitle' => $eventTitle,
                 'eventBody' => $eventBody,
                 'eventDate' => $eventDate,
+                'eventTime' => $eventTime,
                 'eventLocation' => $eventLocation
             );
             $this->db->insert('event', $data);
         }
         public function select_events()
         {
-            $this->db->order_by('eventDate', 'ASC');
             $query = $this->db->get('event');
             return $query->result();
         }
@@ -25,11 +25,12 @@
             $query = $this->db->get('event');
             return $query->result();
         }
-        public function update_event_where_id($id,$eventTitle,$eventBody,$eventDate,$eventLocation){
+        public function update_event_where_id($id,$eventTitle,$eventBody,$eventDate,$eventTime,$eventLocation){
             $data = array(
                 'eventTitle' => $eventTitle,
                 'eventBody' => $eventBody,
                 'eventDate' => $eventDate,
+                'eventTime' => $eventTime,
                 'eventLocation' => $eventLocation
             );
             $this->db->where('id', $id);

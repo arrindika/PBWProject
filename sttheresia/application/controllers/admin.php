@@ -2,13 +2,13 @@
 
 class Admin extends CI_Controller{
 
-	// function __construct(){
-	// 	parent::__construct();
-	//
-	// 	if($this->session->userdata('status') != "login"){
-	// 		redirect(base_url("login"));
-	// 	}
-	// }
+	function __construct(){
+		parent::__construct();
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("login"));
+		}
+		$this->load->helper(array('form', 'url'));
+	}
 	//
 	// function index(){
 	// 	$this->load->view('pages/home');
@@ -35,7 +35,7 @@ class Admin extends CI_Controller{
 		$this->load->view('login_admin',$data);
 	}
 	//page events
-	public function edit(){
+	public function event(){
 		$this->load->model('event_model');
 		$editID = $this->event_model->input->post('edit-id');
 		if($editID!==NULL){
@@ -43,7 +43,7 @@ class Admin extends CI_Controller{
 		}
 
 		$data['events'] = $this->event_model->select_events();
-		$this->load->view('admin/edit', $data);
+		$this->load->view('admin/event', $data);
 	}
 	public function delete(){
 		$this->load->model('event_model');
@@ -52,16 +52,19 @@ class Admin extends CI_Controller{
 			$this->event_model->delete_event_where_id($deleteID);
 		}
 		$data['events'] = $this->event_model->select_events();
-		$this->load->view('admin/edit', $data);
+		echo "<script>alert('Data Berhasil Di hapus');</script>";
+		$this->load->view('admin/event', $data);
 	}
 	public function submitevent(){
 		$this->load->model('event_model');
 		$eventTitle = $this->event_model->input->post('eventTitle');
 		$eventBody = $this->event_model->input->post('eventBody');
 		$eventDate = $this->event_model->input->post('eventDate');
+		$eventTime = $this->event_model->input->post('eventTime');
 		$eventLocation = $this->event_model->input->post('eventLocation');
-		$this->event_model->insert_event($eventTitle,$eventBody,$eventDate,$eventLocation);
-		redirect(base_url().'admin/edit');
+		$this->event_model->insert_event($eventTitle,$eventBody,$eventDate,$eventTime,$eventLocation);
+		echo "<script>alert('Data Berhasil Di Simpan');</script>";
+		redirect(base_url().'admin/event');
 	}
 	public function editevent()
 	{
@@ -70,9 +73,11 @@ class Admin extends CI_Controller{
 		$eventTitle = $this->event_model->input->post('eventTitle');
 		$eventBody = $this->event_model->input->post('eventBody');
 		$eventDate = $this->event_model->input->post('eventDate');
+		$eventTime = $this->event_model->input->post('eventTime');
 		$eventLocation = $this->event_model->input->post('eventLocation');
-		$this->event_model->update_event_where_id($id,$eventTitle,$eventBody,$eventDate,$eventLocation);
-		redirect(base_url().'admin/edit');
+		$this->event_model->update_event_where_id($id,$eventTitle,$eventBody,$eventDate,$eventTime,$eventLocation);
+		echo "<script>alert('Data Berhasil Di Edit');</script>";
+		redirect(base_url().'admin/event');
 	}
 
 
@@ -97,6 +102,7 @@ class Admin extends CI_Controller{
 			$this->news_model->delete_news_where_id($deleteID);
 		}
 		$data['newsdata'] = $this->news_model->select_news();
+		echo "<script>alert('Data Berhasil Di hapus');</script>";
 		$this->load->view('admin/news', $data);
 	}
 	public function submitnews(){
@@ -106,6 +112,7 @@ class Admin extends CI_Controller{
 		$newsDate = $this->news_model->input->post('newsDate');
 		$newsAuthor = $this->news_model->input->post('newsAuthor');
 		$this->news_model->insert_news($newsTitle,$newsBody,$newsDate,$newsAuthor);
+		echo "<script>alert('Data Berhasil Di Simpan');</script>";
 		redirect(base_url().'admin/news');
 	}
 	public function editnews()
@@ -117,6 +124,7 @@ class Admin extends CI_Controller{
 		$newsDate = $this->news_model->input->post('newsDate');
 		$newsAuthor = $this->news_model->input->post('newsAuthor');
 		$this->news_model->update_news_where_id($id,$newsTitle,$newsBody,$newsDate,$newsAuthor);
+		echo "<script>alert('Data Berhasil Di Edit');</script>";
 		redirect(base_url().'admin/news');
 	}
 
@@ -140,6 +148,7 @@ class Admin extends CI_Controller{
 			$this->teacher_model->delete_dataguru_where_id($deleteID);
 		}
 		$data['teachersdata'] = $this->teacher_model->select_dataguru();
+		echo "<script>alert('Data Berhasil Di hapus');</script>";
 		$this->load->view('admin/teachers', $data);
 	}
 	public function submitDataGuru(){
@@ -155,7 +164,7 @@ class Admin extends CI_Controller{
 		$pendidikan_jurusan = $this->teacher_model->input->post('pendidikan_jurusan');
 		$mulai_kerja = $this->teacher_model->input->post('mulai_kerja');
 		$this->teacher_model->insert_dataguru($nama,$nip,$tanggal_lahir,$jenis_kelamin,$pendidikan_ijazah,$pendidikan_tahun,$pendidikan_tingkat,$pendidikan_jurusan,$mulai_kerja);
-
+		echo "<script>alert('Data Berhasil Di Simpan');</script>";
 		redirect(base_url().'admin/teachers');
 	}
 	public function editDataGuru()
@@ -172,8 +181,62 @@ class Admin extends CI_Controller{
 		$pendidikan_jurusan = $this->teacher_model->input->post('pendidikan_jurusan');
 		$mulai_kerja = $this->teacher_model->input->post('mulai_kerja');
 		$this->teacher_model->update_dataguru_where_id($id,$nama,$nip,$tanggal_lahir,$jenis_kelamin,$pendidikan_ijazah,$pendidikan_tahun,$pendidikan_tingkat,$pendidikan_jurusan,$mulai_kerja);
+		echo "<script>alert('Data Berhasil Di Edit');</script>";
 		redirect(base_url().'admin/teachers');
 	}
 
+
+	//page Gallery
+	public function gallery()
+	{
+		$data["error"] = "";
+		$this->load->view('admin/gallery', $data);;
+	}
+
+	public function uploadPicture(){
+		// $this->load->helper(array('form', 'url'));
+		// $config['upload_path']          = './assets/images/galeri/';
+		// $config['allowed_types']        = 'gif|jpg|png';
+		// $config['max_size']             = 1000;
+		// $config['max_width']            = 1024;
+		// $config['max_height']           = 768;
+		//
+		// $this->load->library('upload', $config);
+		// $this->upload->initialize($config);
+		// if ( ! $this->upload->do_upload('berkas')){
+		// 	$data['error'] = $this->upload->display_errors();
+		// 	$this->load->view('admin/gallery', $data);
+		// }else{
+		// 	$data['upload_data'] = $this->upload->data();
+		// 	$data["error"] = "";
+		// 	$this->load->view('admin/gallery', $data);
+		// }
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+		$data['title'] = 'Upload New Picture';
+		$this->form_validation->set_rules('namaFoto', 'NamaFoto', 'required');
+		if ($this->form_validation->run() === FALSE){
+		    $this->load->view('admin/gallery');
+		}else{
+		    // Upload the files then pass data to your model
+			$config['upload_path']          = './assets/images/galeri/';
+			$config['allowed_types']        = 'gif|jpg|jpeg|png';
+			$config['max_size']             = 1000;
+			$config['max_width']            = 1024;
+			$config['max_height']           = 768;
+	        $this->load->library('upload', $config);
+
+			$this->upload->initialize($config);
+		    if (! $this->upload->do_upload('picture')){
+		        // If the upload fails
+		        echo $this->upload->display_errors('<p>', '</p>');
+		    }else{
+		        // Pass the full path and post data to the set_newstudent model
+				$this->load->model('gallery_model');
+		        $this->gallery_model->store_pic_data($this->upload->data('file_name'),$this->upload->data('full_path'),$this->input->post());
+		        $this->load->view('admin/gallery');
+		    }
+		}
+	}
 }
 ?>
