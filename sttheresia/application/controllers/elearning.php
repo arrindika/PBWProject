@@ -58,4 +58,12 @@ class elearning extends CI_Controller {
     
     $this->load->view('elearning/materi', $mat); 
     }
+    public function download($nama_materi) {
+        $this->load->helper('download');
+        
+        $data = file_get_contents(base_url().'assets/download/'.$nama_materi.'.pdf');
+        $name = $nama_materi.".pdf";
+        
+        force_download($name,@data);
+    }
 }

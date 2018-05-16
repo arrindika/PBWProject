@@ -3,7 +3,7 @@
   
  <head>
     <meta charset="utf-8">
-    <title>Reports - Bootstrap Admin Template</title>
+    <title>E-Learning SMPK St. Theresia Kupang</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -43,7 +43,7 @@
 			</a>
 			
 			<a class="brand" href="index.html">
-				Bootstrap Admin Template				
+				E-Learning SMPK St. Theresia Kupang				
 			</a>		
 			
 			<div class="nav-collapse">
@@ -132,7 +132,7 @@
                   <tr>
                     <th> Materi </th>
                     <th> Guru</th>
-                    <th class="td-actions"> </th>
+                    <th> Download </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -142,11 +142,10 @@
                                 {
                         ?>    
                         <tr>
-                            <td><?php echo $mat->nama_materi;?></td>
+                        <td><?php echo $mat->nama_materi;?></td>
                         <td><?php echo $mat->nama_guru;?></td>
-                         
-                       <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success">
-                               <i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small">
+                        <td><a href="<?php echo base_url('elearning/download/'.$mat->nama_materi); ?>"> <img border="0" alt="W3Schools" src="<?php echo base_url(); ?>assets/images/down.png" width="30" height="30"></a></td>
+                        </tr>
                     <?php
                             }}
                         ?>   
