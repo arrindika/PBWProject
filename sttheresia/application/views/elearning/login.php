@@ -4,7 +4,7 @@
   
 <head>
     <meta charset="utf-8">
-    <title>Login - Bootstrap Admin Template</title>
+    <title>Login - E-Learning SMPK St. Theresia Kupang</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
@@ -35,7 +35,7 @@
 			</a>
 			
 			<a class="brand" href="index.html">
-				Bootstrap Admin Template				
+				E-Learning SMPK St. Theresia Kupang				
 			</a>		
 			
 			<div class="nav-collapse">
@@ -80,8 +80,8 @@
 				<p>Please provide your details</p>
 				
 				<div class="field">
-					<label for="username">Username</label>
-					<input type="text" id="username" name="username" value="" placeholder="Username" class="login username-field" />
+					<label for="Nomor Induk">Nomor Induk</label>
+					<input type="text" id="noinduk" name="noinduk" value="" placeholder="Username" class="login username-field" />
 				</div> <!-- /field -->
 				
 				<div class="field">

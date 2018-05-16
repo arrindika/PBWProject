@@ -18,14 +18,56 @@ class Elearning extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+<<<<<<< HEAD
 
+=======
+    function __construct() {
+        parent::__construct();
+        $this->load->model('Elearning_view');
+        $this->load->model('Elearning_pelajaran');
+    }
+>>>>>>> 9c85a0615002a5a9dbb8579302c6e7a0a7002475
 	public function index()
 	{
         if (isset($_POST['submit'])){
-            echo "hehehe";
+            $idpengguna = $this->input->post('noinduk');
+            $passpengguna = $this->input->post('password');
+            $hasil = $this->Elearning_view->login($idpengguna,$passpengguna);
+            if($hasil==1){
+                $this->session->set_userdata(array('statis_login'=>'oke'));
+                redirect('elearning/home');
+            }
+            else{
+                redirect('elearning');
+            }
         }
         else{
 		    $this->load->view('elearning/login');
         }
 	}
+    function logout(){
+        $this->session->sess_destroy();
+        redirect('elearning');
+    }
+    function home() {
+        $data['materi'] = $this->Elearning_pelajaran->materi();
+        $this->load->view('elearning/home', $data); 
+    }
+    public function materi($id_matpel) {
+        $mat['mat'] = $this->Elearning_pelajaran->dapet("where b.id_matpel = '$id_matpel'");
+        //$data = array(
+            //"nama_materi" => $mat[1]['nama_materi'],
+            //"nama_guru" => $mat[1]['nama_guru'],
+        //);
+    
+    $this->load->view('elearning/materi', $mat); 
+    }
+    public function download($nama_materi) {
+        $this->load->helper('download');
+        
+        $data = file_get_contents(base_url().'assets/download/'.$nama_materi.'.pdf');
+        $name = $nama_materi.".pdf";
+        
+        force_download($name,@data);
+    }
 }
