@@ -30,7 +30,7 @@ class elearning extends CI_Controller {
             $hasil = $this->Elearning_view->login($idpengguna,$passpengguna);
             if($hasil==1){
                 $this->session->set_userdata(array('statis_login'=>'oke'));
-                redirect('elearning/elearning');
+                redirect('elearning/home');
             }
             else{
                 redirect('elearning');
@@ -43,5 +43,8 @@ class elearning extends CI_Controller {
     function logout(){
         $this->session->sess_destroy();
         redirect('elearning');
+    }
+    function home() {
+        $this->load->view('elearning/home'); 
     }
 }
