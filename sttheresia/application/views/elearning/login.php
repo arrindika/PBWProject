@@ -41,17 +41,11 @@
 			<div class="nav-collapse">
 				<ul class="nav pull-right">
 					
-					<li class="">						
-						<a href="signup.html" class="">
-							Don't have an account?
-						</a>
-						
-					</li>
 					
 					<li class="">						
-						<a href="index.html" class="">
+						<a href="<?php echo base_url(); ?>" class="">
 							<i class="icon-chevron-left"></i>
-							Back to Homepage
+							Kembali ke Halaman Utama
 						</a>
 						
 					</li>
@@ -73,15 +67,15 @@
 		
 		<form action="#" method="post">
 		
-			<h1>Member Login</h1>		
+			<h1>Login</h1>		
 			
 			<div class="login-fields">
 				
-				<p>Please provide your details</p>
+				<p>Masukkan Nomor Induk dan Password</p>
 				
 				<div class="field">
 					<label for="Nomor Induk">Nomor Induk</label>
-					<input type="text" id="noinduk" name="noinduk" value="" placeholder="Username" class="login username-field" />
+					<input type="text" id="noinduk" name="noinduk" value="" placeholder="Nomor Induk" class="login username-field" />
 				</div> <!-- /field -->
 				
 				<div class="field">
@@ -106,11 +100,6 @@
 	
 </div> <!-- /account-container -->
 
-
-
-<div class="login-extra">
-	<a href="#">Reset Password</a>
-</div> <!-- /login-extra -->
 
 
 <script src="<?php echo base_url(); ?>assets/js/jquery-1.7.2.min.js"></script>
