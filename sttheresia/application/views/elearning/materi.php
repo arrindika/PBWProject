@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   
  <head>
@@ -75,6 +76,7 @@
 				</ul>
 			
 				
+				
 			</div><!--/.nav-collapse -->	
 	
 		</div> <!-- /container -->
@@ -94,7 +96,6 @@
 		<div class="container">
 
 			
-				
 
 		</div> <!-- /container -->
 	
@@ -104,6 +105,7 @@
     
 
     
+
 	
 	<div class="main-inner">
 
@@ -115,23 +117,45 @@
 	      
 	      	<div class="info-box">
                <div class="row-fluid stats-box">
-                   <div class="shortcuts"> 
-                     <?php
-                            if($materi){
-                                foreach ($materi as $materi)
-                                {
-                        ?>   
-                       <a href='<?php echo base_url('elearning/materi/'.$materi->id_matpel); ?>' class="shortcut" method="post"><span class="shortcut-label"> <?php echo $materi->nama_matpel;?> </span> </a> 
-                            
-                         <?php
-                            }}
-                         ?>
-                        </div>                
-                   </div>    
+                  
+                   
            
             <!-- /widget-header -->
-             <!-- <div class="shortcuts"> 
-                   </div>-->
+              <div class="widget widget-table action-table">
+            <div class="widget-header"> <i class="icon-th-list"></i>
+              <h3>Daftar Materi </h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th> Materi </th>
+                    <th> Guru</th>
+                    <th class="td-actions"> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                        <?php
+                            if($mat){
+                                foreach ($mat as $mat)
+                                {
+                        ?>    
+                        <tr>
+                            <td><?php echo $mat->nama_materi;?></td>
+                        <td><?php echo $mat->nama_guru;?></td>
+                         
+                       <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success">
+                               <i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small">
+                    <?php
+                            }}
+                        ?>   
+                    
+                </tbody>
+              </table>
+            </div>
+            <!-- /widget-content -->
+          </div>
                  
               <!-- /shortcuts -->
             <!-- /widget-content -->
@@ -147,20 +171,6 @@
          </div>      
 	      	
 	  	  <!-- /row -->
-	
-	      <div class="row">
-	      	
-	      	
-	      	
-	      	
-	      	
-	      	
-	      </div> <!-- /row -->
-	      
-	      
-	      
-	      
-			
 	      
 	      
 	    </div> <!-- /container -->
@@ -170,7 +180,6 @@
     
 
     
-
 <script src="<?php echo base_url(); ?>assets/js/jquery-1.7.2.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/excanvas.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/chart.min.js" type="text/javascript"></script>

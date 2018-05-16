@@ -21,6 +21,7 @@ class elearning extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Elearning_view');
+        $this->load->model('Elearning_pelajaran');
     }
 	public function index()
 	{
@@ -45,6 +46,16 @@ class elearning extends CI_Controller {
         redirect('elearning');
     }
     function home() {
-        $this->load->view('elearning/home'); 
+        $data['materi'] = $this->Elearning_pelajaran->materi();
+        $this->load->view('elearning/home', $data); 
+    }
+    public function materi($id_matpel) {
+        $mat['mat'] = $this->Elearning_pelajaran->dapet("where b.id_matpel = '$id_matpel'");
+        //$data = array(
+            //"nama_materi" => $mat[1]['nama_materi'],
+            //"nama_guru" => $mat[1]['nama_guru'],
+        //);
+    
+    $this->load->view('elearning/materi', $mat); 
     }
 }
