@@ -80,8 +80,8 @@
 				<p>Please provide your details</p>
 				
 				<div class="field">
-					<label for="username">Username</label>
-					<input type="text" id="username" name="username" value="" placeholder="Username" class="login username-field" />
+					<label for="Nomor Induk">Nomor Induk</label>
+					<input type="text" id="noinduk" name="noinduk" value="" placeholder="Username" class="login username-field" />
 				</div> <!-- /field -->
 				
 				<div class="field">

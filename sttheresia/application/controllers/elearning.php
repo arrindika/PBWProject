@@ -18,14 +18,30 @@ class elearning extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-  
+    function __construct() {
+        parent::__construct();
+        $this->load->model('Elearning_view');
+    }
 	public function index()
 	{
         if (isset($_POST['submit'])){
-            echo "hehehe";
+            $idpengguna = $this->input->post('noinduk');
+            $passpengguna = $this->input->post('password');
+            $hasil = $this->Elearning_view->login($idpengguna,$passpengguna);
+            if($hasil==1){
+                $this->session->set_userdata(array('statis_login'=>'oke'));
+                redirect('elearning/elearning');
+            }
+            else{
+                redirect('elearning');
+            }
         }
         else{
 		    $this->load->view('elearning/login'); 
         }
 	}
+    function logout(){
+        $this->session->sess_destroy();
+        redirect('elearning');
+    }
 }
