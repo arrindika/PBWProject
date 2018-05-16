@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class elearning extends CI_Controller {
+class Elearning extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,14 +18,14 @@ class elearning extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-  
+
 	public function index()
 	{
         if (isset($_POST['submit'])){
             echo "hehehe";
         }
         else{
-		    $this->load->view('elearning/login'); 
+		    $this->load->view('elearning/login');
         }
 	}
 }

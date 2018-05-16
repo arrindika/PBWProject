@@ -17,7 +17,7 @@ class Login extends CI_Controller{
 		$password = $this->input->post('password');
 		$where = array(
 			'username' => $username,
-			'password' => md5($password)
+			'password' => sha1($password)
 			);
 		$cek = $this->login_model->cek_login("admin",$where)->num_rows();
 		if($cek > 0){
@@ -31,8 +31,17 @@ class Login extends CI_Controller{
 
 			redirect(base_url("admin/home"));
 
+		}elseif($username == null && $password != null){
+			echo "<script>alert('Field Username harus terisi');</script>";
+			$this->load->view('admin/login');
+
+		}elseif($username != null && $password == null) {
+			echo "<script>alert('Field Password harus terisi');</script>";
+			$this->load->view('admin/login');
+
 		}else{
-			echo "Username dan password salah !";
+			echo "<script>alert('Username / Password tidak valid, harap cek kembali');</script>";
+			$this->load->view('admin/login');
 		}
 	}
 
