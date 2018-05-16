@@ -5,14 +5,14 @@ class Login extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->model('login_model');
+
 	}
 
-	function index($msg = NULL){
-        $data['msg'] = $msg;
-		$this->load->view('login_admin',$data);
+	function index(){
+		$this->load->view('admin/login');
 	}
 
-	function aksi_login(){
+	function aksi_login($msg = NULL){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		$where = array(
@@ -21,6 +21,7 @@ class Login extends CI_Controller{
 			);
 		$cek = $this->login_model->cek_login("admin",$where)->num_rows();
 		if($cek > 0){
+
 			$data_session = array(
 				'nama' => $username,
 				'status' => "login"
@@ -31,8 +32,7 @@ class Login extends CI_Controller{
 			redirect(base_url("admin/home"));
 
 		}else{
-            $msg = '<font color=red>Invalid username and/or password.</font><br />';
-            $this->index($msg);
+			echo "Username dan password salah !";
 		}
 	}
 
