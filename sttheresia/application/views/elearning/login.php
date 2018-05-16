@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -70,7 +71,7 @@
 	
 	<div class="content clearfix">
 		
-		<form action="login.php" method="post">
+		<form action="#" method="post">
 		
 			<h1>Member Login</h1>		
 			
@@ -92,12 +93,8 @@
 			
 			<div class="login-actions">
 				
-				<span class="login-checkbox">
-					<input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
-					<label class="choice" for="Field">Keep me signed in</label>
-				</span>
 									
-				<button class="button btn btn-success btn-large">Sign In</button>
+				<button class="button btn btn-success btn-large" type="submit" name="submit">Sign In</button>
 				
 			</div> <!-- .actions -->
 			

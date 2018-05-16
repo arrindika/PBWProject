@@ -18,22 +18,14 @@ class elearning extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-    public function view($page = 'elearning')
-        {
-            if ( ! file_exists(APPPATH.'views/elearning/'.$page.'.php'))
-                {
-                    show_404();
-                }
-
-                $data['title'] = ucfirst($page);
-                $this->load->model('elearning');
-                $data['latestNews'] = $this->news_model->select_news_two_nearest();
-                
-                $this->load->helper('url');
-                $this->load->view('elearning/'.$page, $data);
-        }
+  
 	public function index()
 	{
-		$this->load->view('elearning/login');
+        if (isset($_POST['submit'])){
+            echo "hehehe";
+        }
+        else{
+		    $this->load->view('elearning/login'); 
+        }
 	}
 }
