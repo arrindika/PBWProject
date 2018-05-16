@@ -29,13 +29,5 @@
             ?>
         </span>
     </a>
-    <a href="<?php echo base_url(); ?>admin/gallery" class="list-group-item">
-        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-        Galley Photo
-        <span class="badge">
-            <?php
-                echo $this->db->count_all('dataguru');
-            ?>
-        </span>
-    </a>
+    
 </div>

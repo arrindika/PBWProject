@@ -27,7 +27,7 @@
 					<thead class="thead">
 						<tr>
 							<td><b>Nama</b></td>
-							<td><b>NIP</b></td>
+							<td><b>Jenis Kelamin</b></td>
 							<td><b>Tanggal Lahir</b></td>
 							<td><b>Pendidikan Jurusan</b></td>
 						</tr>
