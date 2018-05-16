@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class elearning extends CI_Controller {
+class Elearning extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,11 +18,15 @@ class elearning extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+<<<<<<< HEAD
+
+=======
     function __construct() {
         parent::__construct();
         $this->load->model('Elearning_view');
         $this->load->model('Elearning_pelajaran');
     }
+>>>>>>> 9c85a0615002a5a9dbb8579302c6e7a0a7002475
 	public function index()
 	{
         if (isset($_POST['submit'])){
@@ -38,7 +42,7 @@ class elearning extends CI_Controller {
             }
         }
         else{
-		    $this->load->view('elearning/login'); 
+		    $this->load->view('elearning/login');
         }
 	}
     function logout(){

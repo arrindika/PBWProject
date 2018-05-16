@@ -21,30 +21,29 @@
 
 			<div class="main-content">
 				<div class="slider-con">
-					<ul class="bxslider">
+					<ul class="container">
 						<li>
 							<div class="slide container">
 								<ul>
+									<!-- <?php
+										if (isset($pictures)) {
+											foreach ($pictures as $picture) {
+												echo "
+													<li>
+														<b>$picture->namaFoto</b><br>
+														<img src='<?php echo base_url(); ?>assets/images/galeri/lapangan.jpeg' alt='$picture->namaFoto'>
+													</li>
+												";
+											}
+										}
+									?>-->
+
 									<li><b>Galeri Piala 1</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/prestasi1.jpeg" alt="Galeri Piala Prestasi #1"></a></li>
 									<li><b>Galeri Piala 2</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/prestasi2.jpeg" alt="Galeri Piala Prestasi #2"></a></li>
 									<li><b>Lapangan Olahraga & Upacara</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/lapangan.jpeg" alt="Lapangan Olahraga & Upacara"></a></li>
 									<li><b>Lab Komputer</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/labkomputer.jpeg" alt="Lab Komputer"></a></li>
 									<li><b>Ruang Guru</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/ruangguru.jpeg" alt="Ruang Guru"></a></li>
 									<li><b>Ruang Kelas</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/ruangkelas.jpeg" alt="Ruang Kelas"></a></li>
-									<li><b>Taman Mini</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/tamanmini.jpeg" alt="Taman Mini"></a></li>
-								</ul>
-							</div>
-						</li>
-						<li>
-							<div class="slide">
-								<ul>
-
-								</ul>
-							</div>
-						</li>
-						<li>
-							<div class="slide">
-								<ul>
 
 								</ul>
 							</div>

@@ -1,5 +1,5 @@
 <?php
-class pages extends CI_Controller {
+class Pages extends CI_Controller {
 
         public function view($page = 'home')
         {
@@ -16,7 +16,7 @@ class pages extends CI_Controller {
                 $this->load->helper('url');
                 $this->load->view('pages/'.$page, $data);
         }
-        
+
         public function gallery($page = 'gallery'){
             if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
                 {
@@ -24,6 +24,8 @@ class pages extends CI_Controller {
                 }
 
                 $data['title'] = ucfirst($page);
+                $this->load->model('gallery_model');
+                $data['pictures'] = $this->gallery_model->selectAllPicture();
                 $this->load->model('news_model');
                 $data['latestNews'] = $this->news_model->select_news_two_nearest();
                 $this->load->model('event_model');

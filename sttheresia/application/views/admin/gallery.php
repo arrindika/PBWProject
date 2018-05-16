@@ -72,7 +72,7 @@
                     <?php echo form_open_multipart('admin/uploadPicture');?>
 
                     <div class="form-group">
-                        <label for="naam">Nama foto</label><br>
+                        <label for="nama">Nama foto</label><br>
                         <input type="input" name="namaFoto" class="form-control" /><br />
                     </div>
                     <div class="form-group">
