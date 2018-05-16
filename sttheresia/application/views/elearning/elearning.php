@@ -1,11 +1,3 @@
-<?php
-// Create database connection using config file
-include_once("config.php");
- 
-// Fetch all users data from database
-$result = mysqli_query($mysqli, "SELECT * FROM daftar_matpel ORDER BY id_matpel DESC");
-?>
-<!DOCTYPE html>
 <html lang="en">
   
  <head>
@@ -15,17 +7,17 @@ $result = mysqli_query($mysqli, "SELECT * FROM daftar_matpel ORDER BY id_matpel 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.min.css" rel="stylesheet">
     
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet">
     
-    <link href="css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/home.css" rel="stylesheet">
     
-    <link href="css/pages/reports.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/pages/reports.css" rel="stylesheet">
     
-    <link href="css/pages/dashboard.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/pages/dashboard.css" rel="stylesheet">
      
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -188,13 +180,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM daftar_matpel ORDER BY id_matpel 
                    
            
             <!-- /widget-header -->
-              <div class="shortcuts"> <?php  
-                                        while($user_data = mysqli_fetch_array($result)) {         
-                                        echo "<a href='view.php?id=".$user_data['nama_matpel']."' class=\"shortcut\"><i class=\"shortcut-icon icon-th-list\"></i><span class=\"shortcut-label\">".$user_data['nama_matpel']."</span> </a>";
-                                        
-                                        }
-                                        ?>
-                   </div>
+             <!-- <div class="shortcuts"> 
+                   </div>-->
                  
               <!-- /shortcuts -->
             <!-- /widget-content -->
@@ -373,11 +360,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM daftar_matpel ORDER BY id_matpel 
 </div> <!-- /footer -->
     
 
-<script src="js/jquery-1.7.2.min.js"></script>
-<script src="js/excanvas.min.js"></script>
-<script src="js/chart.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/base.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery-1.7.2.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/excanvas.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/chart.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/base.js"></script>
 <script>
 
     var pieData = [
