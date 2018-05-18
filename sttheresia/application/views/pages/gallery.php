@@ -25,25 +25,26 @@
 						<li>
 							<div class="slide container">
 								<ul>
-									<!-- <?php
+									<?php
 										if (isset($pictures)) {
 											foreach ($pictures as $picture) {
+												$imgpath = base_url("assets/images/galeri/".$picture->fileFoto);
 												echo "
 													<li>
 														<b>$picture->namaFoto</b><br>
-														<img src='<?php echo base_url(); ?>assets/images/galeri/lapangan.jpeg' alt='$picture->namaFoto'>
+														<img src='$imgpath' alt='$imgpath'>
 													</li>
 												";
 											}
 										}
-									?>-->
+									?>
 
-									<li><b>Galeri Piala 1</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/prestasi1.jpeg" alt="Galeri Piala Prestasi #1"></a></li>
+									<!-- <li><b>Galeri Piala 1</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/prestasi1.jpeg" alt="Galeri Piala Prestasi #1"></a></li>
 									<li><b>Galeri Piala 2</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/prestasi2.jpeg" alt="Galeri Piala Prestasi #2"></a></li>
 									<li><b>Lapangan Olahraga & Upacara</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/lapangan.jpeg" alt="Lapangan Olahraga & Upacara"></a></li>
 									<li><b>Lab Komputer</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/labkomputer.jpeg" alt="Lab Komputer"></a></li>
 									<li><b>Ruang Guru</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/ruangguru.jpeg" alt="Ruang Guru"></a></li>
-									<li><b>Ruang Kelas</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/ruangkelas.jpeg" alt="Ruang Kelas"></a></li>
+									<li><b>Ruang Kelas</b><br><a href="#"><img src="<?php echo base_url(); ?>assets/images/galeri/ruangkelas.jpeg" alt="Ruang Kelas"></a></li> -->
 
 								</ul>
 							</div>

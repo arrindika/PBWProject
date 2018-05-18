@@ -15,7 +15,6 @@
         <li><a href="<?php echo base_url(); ?>admin/news">News</a></li>
         <li><a href="<?php echo base_url(); ?>admin/event">Events</a></li>
         <li><a href="<?php echo base_url(); ?>admin/teachers">Teachers</a></li>
-        <li><a href="<?php echo base_url(); ?>admin/gallery">Gallery</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Welcome, ADMIN</a></li>

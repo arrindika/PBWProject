@@ -52,7 +52,7 @@ class Admin extends CI_Controller{
 			$this->event_model->delete_event_where_id($deleteID);
 		}
 		$data['events'] = $this->event_model->select_events();
-		echo "<script>alert('Data Berhasil Di hapus');</script>";
+		
 		$this->load->view('admin/event', $data);
 	}
 	public function submitevent(){
@@ -63,7 +63,7 @@ class Admin extends CI_Controller{
 		$eventTime = $this->event_model->input->post('eventTime');
 		$eventLocation = $this->event_model->input->post('eventLocation');
 		$this->event_model->insert_event($eventTitle,$eventBody,$eventDate,$eventTime,$eventLocation);
-		echo "<script>alert('Data Berhasil Di Simpan');</script>";
+		
 		redirect(base_url().'admin/event');
 	}
 	public function editevent()
@@ -76,7 +76,7 @@ class Admin extends CI_Controller{
 		$eventTime = $this->event_model->input->post('eventTime');
 		$eventLocation = $this->event_model->input->post('eventLocation');
 		$this->event_model->update_event_where_id($id,$eventTitle,$eventBody,$eventDate,$eventTime,$eventLocation);
-		echo "<script>alert('Data Berhasil Di Edit');</script>";
+		
 		redirect(base_url().'admin/event');
 	}
 
@@ -102,7 +102,7 @@ class Admin extends CI_Controller{
 			$this->news_model->delete_news_where_id($deleteID);
 		}
 		$data['newsdata'] = $this->news_model->select_news();
-		echo "<script>alert('Data Berhasil Di hapus');</script>";
+		
 		$this->load->view('admin/news', $data);
 	}
 	public function submitnews(){
@@ -112,7 +112,7 @@ class Admin extends CI_Controller{
 		$newsDate = $this->news_model->input->post('newsDate');
 		$newsAuthor = $this->news_model->input->post('newsAuthor');
 		$this->news_model->insert_news($newsTitle,$newsBody,$newsDate,$newsAuthor);
-		echo "<script>alert('Data Berhasil Di Simpan');</script>";
+		
 		redirect(base_url().'admin/news');
 	}
 	public function editnews()
@@ -124,7 +124,7 @@ class Admin extends CI_Controller{
 		$newsDate = $this->news_model->input->post('newsDate');
 		$newsAuthor = $this->news_model->input->post('newsAuthor');
 		$this->news_model->update_news_where_id($id,$newsTitle,$newsBody,$newsDate,$newsAuthor);
-		echo "<script>alert('Data Berhasil Di Edit');</script>";
+		
 		redirect(base_url().'admin/news');
 	}
 
@@ -148,7 +148,7 @@ class Admin extends CI_Controller{
 			$this->teacher_model->delete_dataguru_where_id($deleteID);
 		}
 		$data['teachersdata'] = $this->teacher_model->select_dataguru();
-		echo "<script>alert('Data Berhasil Di hapus');</script>";
+		
 		$this->load->view('admin/teachers', $data);
 	}
 	public function submitDataGuru(){
@@ -164,7 +164,6 @@ class Admin extends CI_Controller{
 		$pendidikan_jurusan = $this->teacher_model->input->post('pendidikan_jurusan');
 		$mulai_kerja = $this->teacher_model->input->post('mulai_kerja');
 		$this->teacher_model->insert_dataguru($nama,$nip,$tanggal_lahir,$jenis_kelamin,$pendidikan_ijazah,$pendidikan_tahun,$pendidikan_tingkat,$pendidikan_jurusan,$mulai_kerja);
-		echo "<script>alert('Data Berhasil Di Simpan');</script>";
 		redirect(base_url().'admin/teachers');
 	}
 	public function editDataGuru()
@@ -181,7 +180,7 @@ class Admin extends CI_Controller{
 		$pendidikan_jurusan = $this->teacher_model->input->post('pendidikan_jurusan');
 		$mulai_kerja = $this->teacher_model->input->post('mulai_kerja');
 		$this->teacher_model->update_dataguru_where_id($id,$nama,$nip,$tanggal_lahir,$jenis_kelamin,$pendidikan_ijazah,$pendidikan_tahun,$pendidikan_tingkat,$pendidikan_jurusan,$mulai_kerja);
-		echo "<script>alert('Data Berhasil Di Edit');</script>";
+		
 		redirect(base_url().'admin/teachers');
 	}
 

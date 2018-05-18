@@ -81,12 +81,7 @@
                     <h4>News</h4>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <div class="well dash-box">
-                    <h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 12,334</h2>
-                    <h4>Visitors</h4>
-                  </div>
-                </div>
+                
               </div>
               </div>
 

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 15 Bulan Mei 2018 pada 09.01
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.0.28
+-- Host: localhost
+-- Generation Time: May 18, 2018 at 01:32 PM
+-- Server version: 10.2.12-MariaDB
+-- PHP Version: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `latihan`
+-- Database: `id5638365_latihan`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,16 +35,69 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(3, 'admin', 'c5a9c89e63451dfcd9f6b6d07f4c9fd0');
+(3, 'admin', '25e09017e3d733f511dd583072ece55a91b4ef8d');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `dataguru`
+-- Table structure for table `daftar_materi`
+--
+
+CREATE TABLE `daftar_materi` (
+  `id_materi` int(3) NOT NULL,
+  `id_matpel` int(30) NOT NULL,
+  `nama_materi` varchar(30) NOT NULL,
+  `nama_guru` varchar(50) NOT NULL,
+  `nama_file` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `daftar_materi`
+--
+
+INSERT INTO `daftar_materi` (`id_materi`, `id_matpel`, `nama_materi`, `nama_guru`, `nama_file`) VALUES
+(1, 1, 'Logaritma', 'budi', 'logaritma.pdf'),
+(2, 1, 'Pitagoras', 'maman', 'pitagoras.pdf'),
+(3, 1, 'Bangun Ruang', 'edi', 'bangun ruang.pdf'),
+(4, 2, 'wasbang', 'rahman', 'wasbang.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `daftar_matpel`
+--
+
+CREATE TABLE `daftar_matpel` (
+  `id_matpel` int(2) NOT NULL,
+  `nama_matpel` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `daftar_matpel`
+--
+
+INSERT INTO `daftar_matpel` (`id_matpel`, `nama_matpel`) VALUES
+(1, 'Matematika'),
+(2, 'PKN'),
+(3, 'Bahasa Indonesia'),
+(4, 'Bahasa Inggris'),
+(5, 'Agama'),
+(6, 'Sejarah'),
+(7, 'Ekonomi'),
+(8, 'Geografi'),
+(9, 'Sosiologi'),
+(10, 'Penjaskes'),
+(11, 'Biologi'),
+(12, 'Fisika');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dataguru`
 --
 
 CREATE TABLE `dataguru` (
@@ -61,17 +114,18 @@ CREATE TABLE `dataguru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `dataguru`
+-- Dumping data for table `dataguru`
 --
 
 INSERT INTO `dataguru` (`id`, `nama`, `nip`, `tanggal_lahir`, `jenis_kelamin`, `pendidikan_ijazah`, `pendidikan_tahun`, `pendidikan_tingkat`, `pendidikan_jurusan`, `mulai_kerja`) VALUES
-(1, 'asass', '', '2018-05-22', 'L', 'sdasasa', '0000-00-00', '', 'wqwqwqw', '2018-05-17'),
-(2, 'qq', '', '2018-05-16', 'P', 'asasa', '2018-05-09', '', 'ASASASA', '2018-05-12');
+(2, 'arif', '', '2018-05-09', 'P', 'asasa', '0000-00-00', '', 'ASASASA', '2018-05-12'),
+(3, 'Arrindika Pradana', '31313213', '1999-05-17', 'L', 'S2', '2018-05-10', 'Magister', 'Sistem Informas', '2018-05-03'),
+(4, 'Kristian', '', '1988-01-06', 'L', 'S1', '1995-02-08', 'Sarjana', 'Ekonomi', '2018-05-08');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `event`
+-- Table structure for table `event`
 --
 
 CREATE TABLE `event` (
@@ -81,11 +135,11 @@ CREATE TABLE `event` (
   `eventDate` date NOT NULL,
   `eventTime` time NOT NULL,
   `eventLocation` varchar(100) NOT NULL,
-  `timeStamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `timeStamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `event`
+-- Dumping data for table `event`
 --
 
 INSERT INTO `event` (`id`, `eventTitle`, `eventBody`, `eventDate`, `eventTime`, `eventLocation`, `timeStamp`) VALUES
@@ -95,7 +149,7 @@ INSERT INTO `event` (`id`, `eventTitle`, `eventBody`, `eventDate`, `eventTime`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gallery`
+-- Table structure for table `gallery`
 --
 
 CREATE TABLE `gallery` (
@@ -106,7 +160,7 @@ CREATE TABLE `gallery` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `gallery`
+-- Dumping data for table `gallery`
 --
 
 INSERT INTO `gallery` (`id`, `namaFoto`, `fileFoto`, `pathFoto`) VALUES
@@ -121,7 +175,7 @@ INSERT INTO `gallery` (`id`, `namaFoto`, `fileFoto`, `pathFoto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `info`
+-- Table structure for table `info`
 --
 
 CREATE TABLE `info` (
@@ -130,85 +184,144 @@ CREATE TABLE `info` (
   `newsBody` text NOT NULL,
   `newsDate` date NOT NULL,
   `newsAuthor` varchar(100) NOT NULL,
-  `timeStamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `timeStamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `info`
+-- Dumping data for table `info`
 --
 
 INSERT INTO `info` (`id`, `newsTitle`, `newsBody`, `newsDate`, `newsAuthor`, `timeStamp`) VALUES
 (1, 'Memukau! Tarian Hegong Siswi SMPK St Theresia Kupang', 'Grand launching aplikasi School Talk dihelat, Senin (7/5/2018) siang.\r\n\r\nAcara pembukaan semakin semarak, ketika tarian Hegong ditampilkan di salah satu ruangan di Hotel Swiss Belin Kristal Kupang.\r\n\r\nTarian yang dipentaskan siswi-siswi dari SMPK St. Theresia Kupang begitu memukau hadirin yang hadir di acara tersebut.\r\n\r\n\r\n\r\nArtikel ini telah tayang di pos-kupang.com dengan judul Memukau! Tarian Hegong Siswi SMPK St Theresia Kupang, http://kupang.tribunnews.com/2018/05/07/memukau-tarian-hegong-siswi-smpk-st-theresia-kupang.\r\nPenulis: Lexy Manafe\r\nEditor: OMDSMY Novemy Leo ', '2018-05-07', 'Penulis: Lexy Manafe Editor: OMDSMY Novemy Leo ', '2018-05-13 16:35:42'),
 (2, 'Hadapi UNBK 2018, ini lho yang dilakukan SMPK ST THERESIA Kuppang', 'POS-KUPANG.COM|KUPANG - Menjelang Ujian Nasional Berbasis Komputer (UNBK) yang akan diselenggarakan dalam waktu dekat ini.\r\n\r\nBanyak persiapan yang dilakukan oleh masing-masing sekolah agar semua siswanya bisa siap menghadapi UNBK.  Tak terkecuali SMPK St. Theresia Kupang.\r\n\r\nKepala sekolah SMPK St. Theresia Kupang Sr. Dafrosa Muti,SSpS saat ditemui Selasa (27/2/2018) mengatakan, sekolahnya sedang dalam proses mempersiapkan siswa-siswinya untuk mengikuti UNBK nanti.\r\n\r\nAdapun persiapan yang dilakukan salah satunya adalah mengadakan les tambahan setelah jam  kegiatan belajar mengajar (KBM).\r\n\r\n\"Ada les tambahan juga setelah jam KBM mereka makan siang dulu baru kita lanjut les.\r\n\r\nSelain materi juga lebih banyak mengerjakan soal-soal ujian yang sudah pernah ada dua atau tiga tahun lalu, dan ini sudah sejak Agustus tahun 2017,\" ujar Dafrosa.\r\n\r\nSelain itu anak-anak juga dibekali dengan try out yang sampai saat ini sudah digelar sebanyak dua kali.\r\n\r\nSelain les dan try out siswanya juga diberi pelatihan atau simulasi UNBK.\r\n\r\n\r\n\r\nArtikel ini telah tayang di pos-kupang.com dengan judul Hadapi UNBK 2018, Ini Loh Yang Dilakukan SMPK St. Theresia Kupang, http://kupang.tribunnews.com/2018/02/27/hadapi-unbk-2018-ini-loh-yang-dilakukan-smpk-st-theresia-kupang.\r\n', '2018-02-27', 'Penulis: Maria Enotoda Editor: Fredrikus Royanto Bau ', '2018-05-13 16:39:06'),
-(3, 'Test 1', 'Test, apakah berhasil ?', '2018-05-13', 'Tian', '2018-05-13 16:42:44');
+(3, 'Test 1', 'Test, apakah berhasil ?', '2018-05-13', 'Tian', '2018-05-13 16:42:44'),
+(4, 'Test', 'HAHAHHAHA', '2018-05-10', 'aa', '2018-05-16 22:42:40'),
+(5, 'aaa', 'aaa', '2018-05-12', 'aaa', '2018-05-16 22:44:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengguna`
+--
+
+CREATE TABLE `pengguna` (
+  `id_pengguna` int(3) NOT NULL,
+  `ni_pengguna` int(10) NOT NULL,
+  `nama_pengguna` varchar(50) NOT NULL,
+  `pass_pengguna` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengguna`
+--
+
+INSERT INTO `pengguna` (`id_pengguna`, `ni_pengguna`, `nama_pengguna`, `pass_pengguna`) VALUES
+(1, 1234567890, 'Arrindika', '7e240de74fb1ed08fa08d38063f6a6a91462a815'),
+(2, 987654321, 'Tian', '7e240de74fb1ed08fa08d38063f6a6a91462a815');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `dataguru`
+-- Indexes for table `daftar_materi`
+--
+ALTER TABLE `daftar_materi`
+  ADD PRIMARY KEY (`id_materi`);
+
+--
+-- Indexes for table `daftar_matpel`
+--
+ALTER TABLE `daftar_matpel`
+  ADD PRIMARY KEY (`id_matpel`);
+
+--
+-- Indexes for table `dataguru`
 --
 ALTER TABLE `dataguru`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `event`
+-- Indexes for table `event`
 --
 ALTER TABLE `event`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `gallery`
+-- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `info`
+-- Indexes for table `info`
 --
 ALTER TABLE `info`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- Indexes for table `pengguna`
+--
+ALTER TABLE `pengguna`
+  ADD PRIMARY KEY (`id_pengguna`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `dataguru`
+-- AUTO_INCREMENT for table `daftar_materi`
 --
-ALTER TABLE `dataguru`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `daftar_materi`
+  MODIFY `id_materi` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `event`
+-- AUTO_INCREMENT for table `daftar_matpel`
+--
+ALTER TABLE `daftar_matpel`
+  MODIFY `id_matpel` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `dataguru`
+--
+ALTER TABLE `dataguru`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `gallery`
+-- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `info`
+-- AUTO_INCREMENT for table `info`
 --
 ALTER TABLE `info`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `pengguna`
+--
+ALTER TABLE `pengguna`
+  MODIFY `id_pengguna` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
